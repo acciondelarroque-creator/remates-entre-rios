@@ -8,11 +8,27 @@ API_URL = "https://www.consignatarias.com.ar/api/remates/proximos"
 OUTPUT = Path("remates.json")
 
 
+def normalizar_provincia(valor):
+    """Normaliza nombres de provincia para comparar sin problemas de acentos/case."""
+    if not valor:
+        return ""
+    return (
+        str(valor)
+        .strip()
+        .upper()
+        .replace("Á", "A")
+        .replace("É", "E")
+        .replace("Í", "I")
+        .replace("Ó", "O")
+        .replace("Ú", "U")
+    )
+
+
 def main():
-    params = {
-        "dias": 30,
-        "provincia": "Entre Ríos",
-    }
+    # El filtro por provincia de la API está documentado, pero el servidor
+    # responde 400 con "Entre Ríos". Pedimos los próximos 30 días y
+    # filtramos Entre Ríos localmente, de forma más robusta.
+    params = {"dias": 30}
 
     response = requests.get(
         API_URL,
@@ -20,7 +36,12 @@ def main():
         headers={"User-Agent": "AccionRural-remates-entre-rios/1.0"},
         timeout=30,
     )
-    response.raise_for_status()
+
+    if not response.ok:
+        raise RuntimeError(
+            f"La API respondió HTTP {response.status_code}: {response.text[:500]}"
+        )
+
     payload = response.json()
 
     if not payload.get("success", True):
@@ -34,6 +55,9 @@ def main():
     seen = set()
 
     for item in rows:
+        if normalizar_provincia(item.get("province")) != "ENTRE RIOS":
+            continue
+
         date = item.get("date")
         if not date:
             continue
