@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Próximos remates ganaderos de Entre Ríos.">
+  <title>Remates de Entre Ríos</title>
+  <style>
+    :root { color-scheme: dark; --fondo:#0d1c18; --panel:#152a24; --borde:#2d4a40; --texto:#f4f7f5; --suave:#b6c9c1; --acento:#f4b942; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--fondo); color:var(--texto); }
+    header { padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2)); background:linear-gradient(120deg,#123c2e,#1f5943); }
+    h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
+    header p { margin:.45rem 0 0; color:#d4e5de; }
+    .marquesina { overflow:hidden; background:var(--acento); color:#16231e; font-weight:700; white-space:nowrap; }
+    .marquesina__texto { display:inline-block; padding:.75rem 0; min-width:100%; animation:desplazar 35s linear infinite; }
+    .marquesina:hover .marquesina__texto { animation-play-state:paused; }
+    main { width:min(1100px,calc(100% - 2rem)); margin:2rem auto 3rem; }
+    .estado { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; color:var(--suave); margin-bottom:1.25rem; }
+    .punto { width:.65rem; height:.65rem; border-radius:50%; background:#44d384; display:inline-block; }
+    .lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+    article { border:1px solid var(--borde); border-radius:.85rem; padding:1.1rem; background:var(--panel); box-shadow:0 8px 24px #0002; }
+    .fecha { color:var(--acento); font-weight:800; font-size:1.1rem; }
+    h2 { font-size:1rem; margin:.7rem 0 .35rem; }
+    p { margin:.25rem 0; }
+    .tipo { display:inline-block; margin-top:.8rem; padding:.25rem .55rem; border-radius:999px; background:#24483b; color:#dff1e9; font-size:.78rem; text-transform:capitalize; }
+    .vacio,.error { padding:1.25rem; border:1px dashed var(--borde); border-radius:.75rem; color:var(--suave); }
+    footer { text-align:center; color:var(--suave); padding:1rem; font-size:.85rem; }
+    @keyframes desplazar { from { transform:translateX(100%); } to { transform:translateX(-100%); } }
+    @media (prefers-reduced-motion:reduce) { .marquesina__texto { animation:none; padding-left:1rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Remates de Entre Ríos</h1>
+    <p>Calendario actualizado automáticamente de próximos remates ganaderos.</p>
+  </header>
+
+  <section class="marquesina" aria-label="Próximos remates">
+    <div id="marquesina" class="marquesina__texto">Cargando próximos remates…</div>
+  </section>
+
+  <main>
+    <div class="estado">
+      <span class="punto" aria-hidden="true"></span>
+      <span id="estado">Cargando información…</span>
+    </div>
+    <section id="lista" class="lista" aria-live="polite"></section>
+  </main>
+
+  <footer>Fuente: Consignatarias.com.ar · Actualización automática cada 5 minutos</footer>
+
+  <script>
+    const ARCHIVO = "remates.json";
+    const INTERVALO = 5 * 60 * 1000;
+
+    const texto = (valor) => valor || "Sin información";
+    const fechaLegible = (fecha, hora) => {
+      const valor = new Date(fecha + "T" + (hora || "00:00"));
+      return Number.isNaN(valor) ? [fecha, hora].filter(Boolean).join(" · ") : new Intl.DateTimeFormat("es-AR", {
+        weekday:"short", day:"2-digit", month:"long", hour:hora ? "2-digit" : undefined, minute:hora ? "2-digit" : undefined
+      }).format(valor).replace(",", " ·");
+    };
+
+    function ordenar(remates) {
+      return [...remates].sort((a, b) =>
+        (a.fecha || "").localeCompare(b.fecha || "") ||
+        (a.hora || "").localeCompare(b.hora || "") ||
+        (a.localidad || "").localeCompare(b.localidad || "", "es") ||
+        (a.consignataria || "").localeCompare(b.consignataria || "", "es")
+      );
+    }
+
+    function mostrar(remates, actualizado) {
+      const lista = document.querySelector("#lista");
+      const marquesina = document.querySelector("#marquesina");
+      const estado = document.querySelector("#estado");
+
+      if (!remates.length) {
+        lista.innerHTML = '<p class="vacio">No hay próximos remates informados por el momento.</p>';
+        marquesina.textContent = "No hay próximos remates informados por el momento.";
+      } else {
+        lista.innerHTML = remates.map((r) => `
+          <article>
+            <div class="fecha">${fechaLegible(r.fecha, r.hora)}</div>
+            <h2>${texto(r.localidad)}</h2>
+            <p>${texto(r.consignataria)}</p>
+            ${r.titulo ? `<p>${r.titulo}</p>` : ""}
+            <span class="tipo">${texto(r.tipo)}</span>
+          </article>`
+        ).join("");
+
+        marquesina.textContent = remates.map((r) =>
+          `${fechaLegible(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`
+        ).join("   •   ");
+      }
+
+      const momento = actualizado ? new Date(actualizado) : null;
+      estado.textContent = `${remates.length} remates próximos${momento && !Number.isNaN(momento) ? " · datos actualizados " + momento.toLocaleString("es-AR") : ""}`;
+    }
+
+    async function actualizar() {
+      try {
+        const respuesta = await fetch(`${ARCHIVO}?v=${Date.now()}`, { cache:"no-store" });
+        if (!respuesta.ok) throw new Error("No se pudo leer el calendario.");
+        const datos = await respuesta.json();
+        mostrar(ordenar(datos.remates || []), datos.actualizado);
+      } catch (error) {
+        document.querySelector("#estado").textContent = "No fue posible actualizar el calendario.";
+        document.querySelector("#lista").innerHTML = '<p class="error">Reintentaremos la conexión automáticamente.</p>';
+      }
+    }
+
+    actualizar();
+    setInterval(actualizar, INTERVALO);
+  </script>
+</body>
+</html>
