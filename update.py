@@ -52,7 +52,22 @@ def main():
     if isinstance(data, list):
         rows = data
     elif isinstance(data, dict):
-        rows = data.get("remates") or data.get("items") or data.get("results") or []
+        # Algunas versiones de la API agrupan la lista con nombres diferentes.
+        rows = next(
+            (
+                value
+                for value in (
+                    data.get("remates"),
+                    data.get("items"),
+                    data.get("results"),
+                    data.get("auctions"),
+                    data.get("proximos"),
+                    *data.values(),
+                )
+                if isinstance(value, list)
+            ),
+            [],
+        )
     else:
         rows = []
 
