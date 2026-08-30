@@ -15,11 +15,12 @@
 </head>
 <body>
   <section class="marquesina" aria-label="Próximos remates">
-    <div id="marquesina" class="marquesina__texto">Cargando próximos remates…</div>
+    <div id="marquesina" class="marquesina__texto">Fechas de remates de Entre Ríos</div>
   </section>
 
   <script>
     const ARCHIVO = "remates.json";
+    const elemento = document.querySelector("#marquesina");
 
     const texto = (valor) => valor || "Sin información";
 
@@ -39,11 +40,11 @@
           (a.fecha || "").localeCompare(b.fecha || "") ||
           (a.hora || "").localeCompare(b.hora || "")
         );
-        document.querySelector("#marquesina").textContent = remates.length
+        elemento.textContent = remates.length
           ? remates.map(r => `${fechaLegible(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`).join("   •   ")
           : "No hay próximos remates informados por el momento.";
       } catch (error) {
-        document.querySelector("#marquesina").textContent = "No fue posible actualizar los remates.";
+        // Se mantiene visible el texto inicial; no mostramos un error ni dejamos la franja vacía.
       }
     }
 
