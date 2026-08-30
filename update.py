@@ -77,6 +77,8 @@ def main():
 
     if not isinstance(rows, list):
         raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
+    if rows:
+        print(f"Primer remate recibido: {json.dumps(rows[0], ensure_ascii=False)}")
 
     remates = []
     seen = set()
