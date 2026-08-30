@@ -15,19 +15,7 @@ TZ = ZoneInfo("America/Argentina/Buenos_Aires")
 def normalizar(valor):
     if not valor:
         return ""
-    return (
-        str(valor).strip().upper()
-        .replace("Á", "A").replace("É", "E").replace("Í", "I")
-        .replace("Ó", "O").replace("Ú", "U")
-    )
-
-
-def capitalizar_localidad(valor):
-    """Uniforma localidades: inicial mayúscula y resto minúscula."""
-    texto = limpiar_localidad(valor)
-    if not texto:
-        return ""
-    return " ".join(palabra[:1].upper() + palabra[1:].lower() for palabra in texto.split())
+    return str(valor).strip().upper().replace("Á", "A").replace("É", "E").replace("Í", "I").replace("Ó", "O").replace("Ú", "U")
 
 
 def limpiar_localidad(valor):
@@ -35,8 +23,14 @@ def limpiar_localidad(valor):
         return ""
     texto = str(valor).strip()
     texto = re.sub(r"\s*[,/\-–—]?\s*\(?\s*Entre\s+Ríos\s*\)?", "", texto, flags=re.I)
-    texto = re.sub(r"\s{2,}", " ", texto)
-    return texto.strip(" ,-/–—")
+    return re.sub(r"\s{2,}", " ", texto).strip(" ,-/–—")
+
+
+def capitalizar_localidad(valor):
+    texto = limpiar_localidad(valor)
+    if not texto:
+        return ""
+    return " ".join(p[:1].upper() + p[1:].lower() for p in texto.split())
 
 
 def extraer_rows(payload):
@@ -64,17 +58,10 @@ def obtener_ubicacion(item):
     ubicacion = item.get("ubicacion") or item.get("location") or ""
     if isinstance(ubicacion, dict):
         localidad = ubicacion.get("localidad") or ubicacion.get("city") or ubicacion.get("nombre") or ""
-        provincia = (
-            ubicacion.get("provincia") or ubicacion.get("province")
-            or ubicacion.get("provincia_nombre") or ubicacion.get("provinceName") or ""
-        )
+        provincia = ubicacion.get("provincia") or ubicacion.get("province") or ubicacion.get("provincia_nombre") or ubicacion.get("provinceName") or ""
     else:
-        localidad = str(ubicacion)
-        provincia = ""
-    provincia = (
-        item.get("provincia") or item.get("province")
-        or item.get("provincia_nombre") or item.get("provinceName") or provincia
-    )
+        localidad, provincia = str(ubicacion), ""
+    provincia = item.get("provincia") or item.get("province") or item.get("provincia_nombre") or item.get("provinceName") or provincia
     return capitalizar_localidad(localidad), provincia
 
 
@@ -89,22 +76,17 @@ def main():
 
     response = requests.get(
         API_URL,
-        params={"dias": DIAS},
-        headers={"User-Agent": "AccionRural-remates-entre-rios/4.0"},
+        params={"dias": DIAS, "provincia": "ENTRE RIOS"},
+        headers={"User-Agent": "AccionRural-remates-entre-rios/5.1"},
         timeout=30,
     )
     response.raise_for_status()
     payload = response.json()
-
     if not payload.get("success", True):
         raise RuntimeError(f"La API respondió con error: {payload}")
 
     rows = extraer_rows(payload)
-    if not isinstance(rows, list):
-        raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
-
-    remates = []
-    seen = set()
+    remates, seen = [], set()
 
     for item in rows:
         if not isinstance(item, dict):
@@ -120,17 +102,13 @@ def main():
             continue
 
         localidad, provincia = obtener_ubicacion(item)
-        if "ENTRE RIOS" not in normalizar(provincia):
+        if provincia and "ENTRE RIOS" not in normalizar(provincia):
             continue
 
         hora = item.get("hora") or item.get("time") or ""
         consignataria = obtener_nombre_consignataria(item)
         titulo = item.get("titulo") or item.get("title") or ""
-
-        key = (
-            str(item.get("id") or ""), str(fecha), str(hora),
-            normalizar(consignataria), normalizar(localidad), normalizar(titulo)
-        )
+        key = (str(item.get("id") or ""), str(fecha), str(hora), normalizar(consignataria), normalizar(localidad), normalizar(titulo))
         if key in seen:
             continue
         seen.add(key)
