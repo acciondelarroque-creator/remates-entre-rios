@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-29T22:39:06.072283-03:00",
+  "actualizado": "2026-08-29T22:48:18.990784-03:00",
   "fuente": "Consignatarias.com.ar",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
@@ -7,8 +7,21 @@
     "hasta": "2026-09-19",
     "dias": 21
   },
-  "cantidad": 13,
+  "cantidad": 11,
   "remates": [
+    {
+      "id": 738,
+      "fecha": "2026-08-30",
+      "hora": "14:00",
+      "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
+      "localidad": "Villa Elisa",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "43° EXPOSICION RURAL 75 TOROS - 30 VAQUILLAS - 15 OVINOS",
+      "cabezas_estimadas": 75,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
     {
       "id": 746,
       "fecha": "2026-08-31",
@@ -135,45 +148,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 790,
-      "fecha": "2026-09-03",
-      "hora": "14:00",
-      "consignataria": "U.M.C. S.A.",
-      "localidad": "Rosario Del Tala",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 801,
-      "fecha": "2026-09-04",
-      "hora": "14:00",
-      "consignataria": "Etchevehere Rural SRL",
-      "localidad": "General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Cabaña Malaika - Genética",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://ftp.rural-server.com/remates/images/wjAKCD1U7jwEIlQQ.jpg",
-      "url_youtube": null
-    },
-    {
-      "id": 809,
-      "fecha": "2026-09-05",
-      "hora": "14:00",
-      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
-      "localidad": "Gualeguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "especial",
-      "titulo": "Sábado 5 y Domingo 6 Especial EXPO GUALEGUAY",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
