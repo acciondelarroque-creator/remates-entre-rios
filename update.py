@@ -27,7 +27,6 @@ def limpiar_localidad(valor):
     return texto.strip(" ,-/–—")
 
 
-# Diccionario para conservar nombres correctos con tildes.
 LOCALIDADES_CORRECTAS = {
     "maria grande": "María Grande",
     "general ramirez": "General Ramírez",
@@ -45,8 +44,6 @@ def capitalizar_localidad(valor):
     texto = limpiar_localidad(valor)
     if not texto:
         return ""
-    # Para ubicaciones compuestas, solo normalizamos la localidad completa
-    # sin alterar su estructura (ej. Estancia San Juan / Ruta 20 Km 36 / Urdinarrain).
     partes = [p.strip() for p in texto.split("/")]
     resultado = []
     for parte in partes:
@@ -91,6 +88,10 @@ def obtener_ubicacion(item):
     return localidad, provincia
 
 
+def obtener_fecha(item):
+    return item.get("fecha") or item.get("date") or item.get("fecha_remate")
+
+
 def es_entre_rios(item, localidad, provincia):
     texto = " ".join([normalizar(provincia), normalizar(localidad), normalizar(item.get("url") or item.get("slug") or "")])
     return "ENTRE RIOS" in texto
@@ -101,7 +102,7 @@ def main():
     desde = ahora.date()
     hasta = desde + timedelta(days=DIAS)
 
-    response = requests.get(API_URL, params={"dias": DIAS}, headers={"User-Agent": "AccionRural-remates-entre-rios/7.0"}, timeout=30)
+    response = requests.get(API_URL, params={"dias": DIAS}, headers={"User-Agent": "AccionRural-remates-entre-rios/7.1"}, timeout=30)
     response.raise_for_status()
     payload = response.json()
     if not payload.get("success", True):
