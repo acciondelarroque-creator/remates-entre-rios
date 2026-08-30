@@ -47,9 +47,17 @@ def main():
     if not payload.get("success", True):
         raise RuntimeError(f"La API respondió con error: {payload}")
 
-    rows = payload.get("data", [])
+    # La API puede devolver la lista directamente en data o anidada en data.remates.
+    data = payload.get("data", [])
+    if isinstance(data, list):
+        rows = data
+    elif isinstance(data, dict):
+        rows = data.get("remates") or data.get("items") or data.get("results") or []
+    else:
+        rows = []
+
     if not isinstance(rows, list):
-        raise RuntimeError("Formato inesperado: data no es una lista")
+        raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
 
     remates = []
     seen = set()
