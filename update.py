@@ -48,10 +48,6 @@ def main():
         raise RuntimeError(f"La API respondió con error: {payload}")
 
     # La API puede devolver la lista directamente en data o anidada en data.remates.
-    print(f"Formato de respuesta: tipo data={type(payload.get('data')).__name__}; claves={list(payload.keys())}")
-    if isinstance(payload.get("data"), dict):
-        print(f"Claves dentro de data: {list(payload['data'].keys())}")
-
     data = payload.get("data", [])
     if isinstance(data, list):
         rows = data
@@ -77,25 +73,31 @@ def main():
 
     if not isinstance(rows, list):
         raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
-    if rows:
-        print(f"Primer remate recibido: {json.dumps(rows[0], ensure_ascii=False)}")
-
     remates = []
     seen = set()
 
     for item in rows:
-        if normalizar_provincia(item.get("province")) != "ENTRE RIOS":
+        consignataria = item.get("consignataria") or {}
+        consignataria_nombre = (
+            consignataria.get("nombre") if isinstance(consignataria, dict) else None
+        ) or item.get("consignatariaName")
+        ubicacion = item.get("ubicacion") or item.get("location") or ""
+        provincia = item.get("provincia") or item.get("province") or ubicacion
+
+        # La ubicación es el dato geográfico del evento; la provincia de la
+        # consignataria puede ser distinta de la provincia donde se realiza.
+        if "ENTRE RIOS" not in normalizar_provincia(provincia):
             continue
 
-        date = item.get("date")
+        date = item.get("fecha") or item.get("date")
         if not date:
             continue
 
         key = (
             date,
-            item.get("time") or "",
-            item.get("consignatariaSlug") or item.get("consignatariaName") or "",
-            item.get("location") or "",
+            item.get("hora") or item.get("time") or "",
+            consignataria_nombre or "",
+            ubicacion,
         )
         if key in seen:
             continue
@@ -105,15 +107,15 @@ def main():
             {
                 "id": item.get("id"),
                 "fecha": date,
-                "hora": item.get("time"),
-                "consignataria": item.get("consignatariaName"),
-                "localidad": item.get("location"),
-                "provincia": item.get("province"),
-                "tipo": item.get("type"),
-                "titulo": item.get("title"),
-                "cabezas_estimadas": item.get("estimatedHeads"),
-                "url_catalogo": item.get("catalogUrl"),
-                "url_youtube": item.get("youtubeUrl"),
+                "hora": item.get("hora") or item.get("time"),
+                "consignataria": consignataria_nombre,
+                "localidad": ubicacion,
+                "provincia": "ENTRE RÍOS",
+                "tipo": item.get("tipo") or item.get("type"),
+                "titulo": item.get("titulo") or item.get("title"),
+                "cabezas_estimadas": item.get("cabezas_estimadas") or item.get("estimatedHeads"),
+                "url_catalogo": item.get("catalogo_url") or item.get("catalogUrl"),
+                "url_youtube": item.get("youtube_url") or item.get("youtubeUrl"),
             }
         )
 
