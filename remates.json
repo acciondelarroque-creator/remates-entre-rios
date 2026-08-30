@@ -1,7 +1,12 @@
 {
-  "actualizado": "2026-08-30T01:04:36.042376+00:00",
+  "actualizado": "2026-08-29T22:21:39.462164-03:00",
   "fuente": "Consignatarias.com.ar",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
+  "periodo": {
+    "desde": "2026-08-29",
+    "hasta": "2026-09-19",
+    "dias": 21
+  },
   "cantidad": 11,
   "remates": [
     {
