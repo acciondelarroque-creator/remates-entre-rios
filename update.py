@@ -62,11 +62,20 @@ def obtener_ubicacion(item):
     else:
         localidad, provincia = str(ubicacion), ""
     provincia = item.get("provincia") or item.get("province") or item.get("provincia_nombre") or item.get("provinceName") or provincia
-    return capitalizar_localidad(localidad), provincia
+    return localidad, provincia
 
 
 def obtener_fecha(item):
     return item.get("fecha") or item.get("date") or item.get("fecha_remate")
+
+
+def es_entre_rios(item, localidad, provincia):
+    texto = " ".join([
+        normalizar(provincia),
+        normalizar(localidad),
+        normalizar(item.get("url") or item.get("slug") or ""),
+    ])
+    return "ENTRE RIOS" in texto
 
 
 def main():
@@ -74,10 +83,13 @@ def main():
     desde = ahora.date()
     hasta = desde + timedelta(days=DIAS)
 
+    # Pedimos todos los remates del período y filtramos Entre Ríos localmente.
+    # El filtro provincia de la API estaba dejando afuera remates que sí figuran
+    # en el calendario público de Consignatarias.
     response = requests.get(
         API_URL,
-        params={"dias": DIAS, "provincia": "ENTRE RIOS"},
-        headers={"User-Agent": "AccionRural-remates-entre-rios/5.1"},
+        params={"dias": DIAS},
+        headers={"User-Agent": "AccionRural-remates-entre-rios/6.0"},
         timeout=30,
     )
     response.raise_for_status()
@@ -86,6 +98,9 @@ def main():
         raise RuntimeError(f"La API respondió con error: {payload}")
 
     rows = extraer_rows(payload)
+    if not isinstance(rows, list):
+        raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
+
     remates, seen = [], set()
 
     for item in rows:
@@ -101,10 +116,11 @@ def main():
         if not (desde <= fecha_obj <= hasta):
             continue
 
-        localidad, provincia = obtener_ubicacion(item)
-        if provincia and "ENTRE RIOS" not in normalizar(provincia):
+        localidad_raw, provincia = obtener_ubicacion(item)
+        if not es_entre_rios(item, localidad_raw, provincia):
             continue
 
+        localidad = capitalizar_localidad(localidad_raw)
         hora = item.get("hora") or item.get("time") or ""
         consignataria = obtener_nombre_consignataria(item)
         titulo = item.get("titulo") or item.get("title") or ""
