@@ -22,12 +22,18 @@ def normalizar(valor):
     )
 
 
+def capitalizar_localidad(valor):
+    """Uniforma localidades: inicial mayúscula y resto minúscula."""
+    texto = limpiar_localidad(valor)
+    if not texto:
+        return ""
+    return " ".join(palabra[:1].upper() + palabra[1:].lower() for palabra in texto.split())
+
+
 def limpiar_localidad(valor):
-    """Elimina provincia/región agregada al nombre de la localidad."""
     if not valor:
         return ""
     texto = str(valor).strip()
-    # Quita Entre Ríos con separadores habituales o entre paréntesis.
     texto = re.sub(r"\s*[,/\-–—]?\s*\(?\s*Entre\s+Ríos\s*\)?", "", texto, flags=re.I)
     texto = re.sub(r"\s{2,}", " ", texto)
     return texto.strip(" ,-/–—")
@@ -69,7 +75,7 @@ def obtener_ubicacion(item):
         item.get("provincia") or item.get("province")
         or item.get("provincia_nombre") or item.get("provinceName") or provincia
     )
-    return limpiar_localidad(localidad), provincia
+    return capitalizar_localidad(localidad), provincia
 
 
 def obtener_fecha(item):
@@ -84,7 +90,7 @@ def main():
     response = requests.get(
         API_URL,
         params={"dias": DIAS},
-        headers={"User-Agent": "AccionRural-remates-entre-rios/3.0"},
+        headers={"User-Agent": "AccionRural-remates-entre-rios/4.0"},
         timeout=30,
     )
     response.raise_for_status()
@@ -103,7 +109,6 @@ def main():
     for item in rows:
         if not isinstance(item, dict):
             continue
-
         fecha = obtener_fecha(item)
         if not fecha:
             continue
