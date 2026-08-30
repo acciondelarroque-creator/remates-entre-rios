@@ -48,6 +48,10 @@ def main():
         raise RuntimeError(f"La API respondió con error: {payload}")
 
     # La API puede devolver la lista directamente en data o anidada en data.remates.
+    print(f"Formato de respuesta: tipo data={type(payload.get('data')).__name__}; claves={list(payload.keys())}")
+    if isinstance(payload.get("data"), dict):
+        print(f"Claves dentro de data: {list(payload['data'].keys())}")
+
     data = payload.get("data", [])
     if isinstance(data, list):
         rows = data
