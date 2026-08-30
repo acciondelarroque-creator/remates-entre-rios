@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marquesina de remates</title>
+  <style>
+    html, body { margin:0; padding:0; width:100%; overflow:hidden; }
+    .marquesina { width:100%; overflow:hidden; background:#f4b942; color:#16231e; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-weight:700; white-space:nowrap; }
+    .marquesina__texto { display:inline-block; padding:10px 0; min-width:100%; animation:desplazar 60s linear infinite; }
+    .marquesina:hover .marquesina__texto { animation-play-state:paused; }
+    @keyframes desplazar { from { transform:translateX(100%); } to { transform:translateX(-100%); } }
+    @media (prefers-reduced-motion:reduce) { .marquesina__texto { animation:none; padding-left:10px; } }
+  </style>
+</head>
+<body>
+  <section class="marquesina" aria-label="Próximos remates">
+    <div id="marquesina" class="marquesina__texto">Cargando próximos remates…</div>
+  </section>
+
+  <script>
+    const ARCHIVO = "remates.json";
+
+    const texto = (valor) => valor || "Sin información";
+
+    const fechaLegible = (fecha, hora) => {
+      const valor = new Date(fecha + "T" + (hora || "00:00"));
+      return Number.isNaN(valor) ? [fecha, hora].filter(Boolean).join(" · ") : new Intl.DateTimeFormat("es-AR", {
+        weekday:"short", day:"2-digit", month:"long", hour:hora ? "2-digit" : undefined, minute:hora ? "2-digit" : undefined
+      }).format(valor).replace(",", " ·");
+    };
+
+    async function actualizar() {
+      try {
+        const respuesta = await fetch(`${ARCHIVO}?v=${Date.now()}`, { cache:"no-store" });
+        if (!respuesta.ok) throw new Error();
+        const datos = await respuesta.json();
+        const remates = [...(datos.remates || [])].sort((a,b) =>
+          (a.fecha || "").localeCompare(b.fecha || "") ||
+          (a.hora || "").localeCompare(b.hora || "")
+        );
+        document.querySelector("#marquesina").textContent = remates.length
+          ? remates.map(r => `${fechaLegible(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`).join("   •   ")
+          : "No hay próximos remates informados por el momento.";
+      } catch (error) {
+        document.querySelector("#marquesina").textContent = "No fue posible actualizar los remates.";
+      }
+    }
+
+    actualizar();
+    setInterval(actualizar, 5 * 60 * 1000);
+  </script>
+</body>
+</html>
