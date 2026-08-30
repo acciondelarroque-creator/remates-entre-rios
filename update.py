@@ -22,15 +22,41 @@ def limpiar_localidad(valor):
     if not valor:
         return ""
     texto = str(valor).strip()
-    texto = re.sub(r"\s*[,/\-–—]?\s*\(?\s*Entre\s+Ríos\s*\)?", "", texto, flags=re.I)
-    return re.sub(r"\s{2,}", " ", texto).strip(" ,-/–—")
+    texto = re.sub(r"\s*[,/\-–—]?\s*\(?\s*Entre\s+Ríos\s*\)?", " ", texto, flags=re.I)
+    texto = re.sub(r"\s{2,}", " ", texto)
+    return texto.strip(" ,-/–—")
+
+
+# Diccionario para conservar nombres correctos con tildes.
+LOCALIDADES_CORRECTAS = {
+    "maria grande": "María Grande",
+    "general ramirez": "General Ramírez",
+    "gualeguaychu": "Gualeguaychú",
+    "nogoya": "Nogoyá",
+    "urdinarrain": "Urdinarrain",
+    "villaguay": "Villaguay",
+    "hasenkamp": "Hasenkamp",
+    "rosario del tala": "Rosario del Tala",
+    "villa elisa": "Villa Elisa",
+}
 
 
 def capitalizar_localidad(valor):
     texto = limpiar_localidad(valor)
     if not texto:
         return ""
-    return " ".join(p[:1].upper() + p[1:].lower() for p in texto.split())
+    # Para ubicaciones compuestas, solo normalizamos la localidad completa
+    # sin alterar su estructura (ej. Estancia San Juan / Ruta 20 Km 36 / Urdinarrain).
+    partes = [p.strip() for p in texto.split("/")]
+    resultado = []
+    for parte in partes:
+        clave = normalizar(parte).lower()
+        clave = re.sub(r"\s+", " ", clave).strip()
+        if clave in LOCALIDADES_CORRECTAS:
+            resultado.append(LOCALIDADES_CORRECTAS[clave])
+        else:
+            resultado.append(" ".join(p[:1].upper() + p[1:].lower() for p in parte.split()))
+    return " / ".join(resultado)
 
 
 def extraer_rows(payload):
@@ -65,16 +91,8 @@ def obtener_ubicacion(item):
     return localidad, provincia
 
 
-def obtener_fecha(item):
-    return item.get("fecha") or item.get("date") or item.get("fecha_remate")
-
-
 def es_entre_rios(item, localidad, provincia):
-    texto = " ".join([
-        normalizar(provincia),
-        normalizar(localidad),
-        normalizar(item.get("url") or item.get("slug") or ""),
-    ])
+    texto = " ".join([normalizar(provincia), normalizar(localidad), normalizar(item.get("url") or item.get("slug") or "")])
     return "ENTRE RIOS" in texto
 
 
@@ -83,24 +101,13 @@ def main():
     desde = ahora.date()
     hasta = desde + timedelta(days=DIAS)
 
-    # Pedimos todos los remates del período y filtramos Entre Ríos localmente.
-    # El filtro provincia de la API estaba dejando afuera remates que sí figuran
-    # en el calendario público de Consignatarias.
-    response = requests.get(
-        API_URL,
-        params={"dias": DIAS},
-        headers={"User-Agent": "AccionRural-remates-entre-rios/6.0"},
-        timeout=30,
-    )
+    response = requests.get(API_URL, params={"dias": DIAS}, headers={"User-Agent": "AccionRural-remates-entre-rios/7.0"}, timeout=30)
     response.raise_for_status()
     payload = response.json()
     if not payload.get("success", True):
         raise RuntimeError(f"La API respondió con error: {payload}")
 
     rows = extraer_rows(payload)
-    if not isinstance(rows, list):
-        raise RuntimeError("Formato inesperado: no se encontró una lista de remates")
-
     remates, seen = [], set()
 
     for item in rows:
@@ -130,28 +137,20 @@ def main():
         seen.add(key)
 
         remates.append({
-            "id": item.get("id"),
-            "fecha": str(fecha)[:10],
-            "hora": hora or None,
-            "consignataria": consignataria or None,
-            "localidad": localidad,
-            "provincia": "ENTRE RÍOS",
-            "tipo": item.get("tipo") or item.get("type"),
-            "titulo": titulo or None,
-            "cabezas_estimadas": item.get("cabezas_estimadas") or item.get("estimatedHeads"),
+            "id": item.get("id"), "fecha": str(fecha)[:10], "hora": hora or None,
+            "consignataria": consignataria or None, "localidad": localidad,
+            "provincia": "ENTRE RÍOS", "tipo": item.get("tipo") or item.get("type"),
+            "titulo": titulo or None, "cabezas_estimadas": item.get("cabezas_estimadas") or item.get("estimatedHeads"),
             "url_catalogo": item.get("catalogo_url") or item.get("catalogUrl"),
             "url_youtube": item.get("youtube_url") or item.get("youtubeUrl"),
         })
 
     remates.sort(key=lambda r: (r["fecha"], r["hora"] or "23:59", r["localidad"] or "", r["consignataria"] or ""))
-
     output = {
-        "actualizado": ahora.isoformat(),
-        "fuente": "Consignatarias.com.ar",
+        "actualizado": ahora.isoformat(), "fuente": "Consignatarias.com.ar",
         "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
         "periodo": {"desde": desde.isoformat(), "hasta": hasta.isoformat(), "dias": DIAS},
-        "cantidad": len(remates),
-        "remates": remates,
+        "cantidad": len(remates), "remates": remates,
     }
     OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Guardados {len(remates)} remates de Entre Ríos entre {desde} y {hasta}")
