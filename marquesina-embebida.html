@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remates</title>
+<style>
+html,body{margin:0;padding:0;width:100%;overflow:hidden}
+#marquesina{height:45px;line-height:45px;background:#f4b942;color:#16231e;font:700 16px/45px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap;overflow:hidden;text-align:center}
+#texto{display:inline-block}
+.mover{animation:desplazar 60s linear infinite}
+@keyframes desplazar{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+</style>
+</head>
+<body>
+<div id="marquesina"><span id="texto">Fechas de remates de Entre Ríos</span></div>
+<script>
+const texto=document.getElementById('texto');
+const URL_JSON='remates.json';
+function fecha(f,h){const d=new Date(f+'T'+(h||'00:00'));return new Intl.DateTimeFormat('es-AR',{weekday:'short',day:'2-digit',month:'long',hour:h?'2-digit':undefined,minute:h?'2-digit':undefined}).format(d).replace(',',' ·');}
+async function cargar(){try{const r=await fetch(URL_JSON+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();const a=(d.remates||[]).sort((x,y)=>(x.fecha||'').localeCompare(y.fecha||'')||(x.hora||'').localeCompare(y.hora||''));if(!a.length)return;texto.textContent=a.map(r=>`${fecha(r.fecha,r.hora)} · ${r.localidad||'Sin información'} · ${r.consignataria||'Sin información'}`).join('   •   ');texto.classList.add('mover');}catch(e){}}
+cargar();setInterval(cargar,300000);
+</script>
+</body>
+</html>
