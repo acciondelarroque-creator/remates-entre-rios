@@ -6,16 +6,18 @@
   <title>Marquesina de remates</title>
   <style>
     html, body { margin:0; padding:0; width:100%; overflow:hidden; }
-    .marquesina { width:100%; overflow:hidden; background:#f4b942; color:#16231e; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-weight:700; white-space:nowrap; }
-    .marquesina__texto { display:inline-block; padding:10px 0; min-width:100%; animation:desplazar 60s linear infinite; }
-    .marquesina:hover .marquesina__texto { animation-play-state:paused; }
+    .marquesina { width:100%; height:45px; overflow:hidden; background:#f4b942; color:#16231e; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-weight:700; white-space:nowrap; display:flex; align-items:center; }
+    .marquesina__texto { display:inline-block; padding:10px 0; }
+    .marquesina__texto.cargando { width:100%; text-align:center; animation:none; }
+    .marquesina__texto.activo { min-width:100%; animation:desplazar 60s linear infinite; }
+    .marquesina:hover .marquesina__texto.activo { animation-play-state:paused; }
     @keyframes desplazar { from { transform:translateX(100%); } to { transform:translateX(-100%); } }
-    @media (prefers-reduced-motion:reduce) { .marquesina__texto { animation:none; padding-left:10px; } }
+    @media (prefers-reduced-motion:reduce) { .marquesina__texto.activo { animation:none; padding-left:10px; } }
   </style>
 </head>
 <body>
   <section class="marquesina" aria-label="Próximos remates">
-    <div id="marquesina" class="marquesina__texto">Fechas de remates de Entre Ríos</div>
+    <div id="marquesina" class="marquesina__texto cargando">Fechas de remates de Entre Ríos</div>
   </section>
 
   <script>
@@ -40,11 +42,15 @@
           (a.fecha || "").localeCompare(b.fecha || "") ||
           (a.hora || "").localeCompare(b.hora || "")
         );
+
         elemento.textContent = remates.length
           ? remates.map(r => `${fechaLegible(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`).join("   •   ")
           : "No hay próximos remates informados por el momento.";
+
+        elemento.classList.remove("cargando");
+        elemento.classList.add("activo");
       } catch (error) {
-        // Se mantiene visible el texto inicial; no mostramos un error ni dejamos la franja vacía.
+        // Mantener el texto inicial visible si remates.json todavía no está disponible.
       }
     }
 
