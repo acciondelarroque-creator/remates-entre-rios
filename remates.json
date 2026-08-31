@@ -1,29 +1,16 @@
 {
-  "actualizado": "2026-08-30T14:27:40.575343-03:00",
+  "actualizado": "2026-08-31T14:27:58.154001-03:00",
   "fuente": "Consignatarias.com.ar",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-08-30",
-    "hasta": "2026-09-20",
+    "desde": "2026-08-31",
+    "hasta": "2026-09-21",
     "dias": 21
   },
-  "cantidad": 11,
+  "cantidad": 10,
   "remates": [
     {
-      "id": 738,
-      "fecha": "2026-08-30",
-      "hora": "14:00",
-      "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
-      "localidad": "Villa Elisa",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "43° EXPOSICION RURAL 75 TOROS - 30 VAQUILLAS - 15 OVINOS",
-      "cabezas_estimadas": 75,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 746,
+      "id": 745,
       "fecha": "2026-08-31",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
@@ -36,7 +23,7 @@
       "url_youtube": null
     },
     {
-      "id": 748,
+      "id": 747,
       "fecha": "2026-09-01",
       "hora": "09:30",
       "consignataria": "Etchevehere Rural",
@@ -49,7 +36,20 @@
       "url_youtube": null
     },
     {
-      "id": 757,
+      "id": 753,
+      "fecha": "2026-09-01",
+      "hora": "14:00",
+      "consignataria": "SÁENZ VALIENTE, BULLRICH Y CIA. S.A.",
+      "localidad": "Colon",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Angus, Brangus, Braford y Hereford 9° Remate Anual Cabaña LOS PRIMOS Cabaña LA MARÍA ELENA y Estab. DON CARLOS Auspicia Angus",
+      "cabezas_estimadas": 320,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 758,
       "fecha": "2026-09-01",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -62,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 769,
+      "id": 771,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "Edgar E. Pastore y Cía. S.R.L.",
@@ -75,23 +75,10 @@
       "url_youtube": null
     },
     {
-      "id": 773,
+      "id": 775,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
-      "localidad": "Villaguay, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 774,
-      "fecha": "2026-09-02",
-      "hora": "14:00",
-      "consignataria": "U.M.C. S.A.",
       "localidad": "Villaguay, Entre Rios",
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
@@ -104,6 +91,19 @@
       "id": 776,
       "fecha": "2026-09-02",
       "hora": "14:00",
+      "consignataria": "U.M.C. S.A.",
+      "localidad": "Villaguay, Entre Rios",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "invernada",
+      "titulo": "Remate de Gordo, Invernada y Cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 778,
+      "fecha": "2026-09-02",
+      "hora": "14:00",
       "consignataria": "UMC SA - Haciendas Villaguay SRL",
       "localidad": "Villaguay, Entre Rios",
       "provincia": "ENTRE RÍOS",
@@ -114,7 +114,7 @@
       "url_youtube": null
     },
     {
-      "id": 778,
+      "id": 780,
       "fecha": "2026-09-02",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -127,7 +127,7 @@
       "url_youtube": null
     },
     {
-      "id": 783,
+      "id": 785,
       "fecha": "2026-09-03",
       "hora": "10:30",
       "consignataria": "Coop. La Ganadera",
@@ -137,19 +137,6 @@
       "titulo": "REMATE FERIA EN INSTALACIONES GENERAL RAMÍREZ",
       "cabezas_estimadas": null,
       "url_catalogo": "https://ftp.rural-server.com/remates/images/FBYrTHQrNUis3NrI.png",
-      "url_youtube": null
-    },
-    {
-      "id": 789,
-      "fecha": "2026-09-03",
-      "hora": "14:00",
-      "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
-      "localidad": "Rosario del Tala",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
       "url_youtube": null
     }
   ]
