@@ -31,6 +31,7 @@ LOCALIDADES_CORRECTAS = {
     "maria grande": "María Grande",
     "general ramirez": "General Ramírez",
     "gualeguaychu": "Gualeguaychú",
+    "gualeguay": "Gualeguay",
     "nogoya": "Nogoyá",
     "urdinarrain": "Urdinarrain",
     "villaguay": "Villaguay",
@@ -97,6 +98,15 @@ def es_entre_rios(item, localidad, provincia):
     return "ENTRE RIOS" in texto
 
 
+def corregir_ubicacion_especifica(localidad, consignataria, titulo):
+    """Correcciones conocidas de ubicación que la fuente puede devolver mal."""
+    texto = normalizar(f"{consignataria} {titulo}")
+    if "MENDIZABAL" in texto:
+        # Mendizábal Consignaciones realiza este remate en la Sociedad Rural de Gualeguay.
+        return "Gualeguay"
+    return localidad
+
+
 def main():
     ahora = datetime.now(TZ)
     desde = ahora.date()
@@ -132,6 +142,8 @@ def main():
         hora = item.get("hora") or item.get("time") or ""
         consignataria = obtener_nombre_consignataria(item)
         titulo = item.get("titulo") or item.get("title") or ""
+        localidad = corregir_ubicacion_especifica(localidad, consignataria, titulo)
+
         key = (str(item.get("id") or ""), str(fecha), str(hora), normalizar(consignataria), normalizar(localidad), normalizar(titulo))
         if key in seen:
             continue
