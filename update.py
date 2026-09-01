@@ -11,6 +11,24 @@ OUTPUT = Path("remates.json")
 DIAS = 21
 TZ = ZoneInfo("America/Argentina/Buenos_Aires")
 
+# Remates aportados directamente por Acción Rural y que no necesariamente
+# aparecen en la fuente automática. Se conservan en cada actualización.
+MANUALES = [
+    {
+        "id": "manual-2026-09-19-basavilbaso",
+        "fecha": "2026-09-19",
+        "hora": None,
+        "consignataria": "Cooperativa Ganadera El Pronunciamiento Ltda.",
+        "localidad": "Basavilbaso",
+        "provincia": "ENTRE RÍOS",
+        "tipo": "reproductores",
+        "titulo": "Gran Remate de Reproductores y Vientres de Cabaña",
+        "cabezas_estimadas": None,
+        "url_catalogo": None,
+        "url_youtube": None,
+    }
+]
+
 
 def normalizar(valor):
     if not valor:
@@ -38,6 +56,7 @@ LOCALIDADES_CORRECTAS = {
     "hasenkamp": "Hasenkamp",
     "rosario del tala": "Rosario del Tala",
     "villa elisa": "Villa Elisa",
+    "basavilbaso": "Basavilbaso",
 }
 
 
@@ -158,9 +177,26 @@ def main():
             "url_youtube": item.get("youtube_url") or item.get("youtubeUrl"),
         })
 
+    # Incorporar los remates informados manualmente por Acción Rural.
+    for manual in MANUALES:
+        try:
+            fecha_obj = datetime.strptime(manual["fecha"], "%Y-%m-%d").date()
+        except (KeyError, ValueError):
+            continue
+        if not (desde <= fecha_obj <= hasta):
+            continue
+        key = (
+            str(manual.get("id") or ""), manual.get("fecha", ""), manual.get("hora") or "",
+            normalizar(manual.get("consignataria")), normalizar(manual.get("localidad")),
+            normalizar(manual.get("titulo")),
+        )
+        if key not in seen:
+            seen.add(key)
+            remates.append(manual)
+
     remates.sort(key=lambda r: (r["fecha"], r["hora"] or "23:59", r["localidad"] or "", r["consignataria"] or ""))
     output = {
-        "actualizado": ahora.isoformat(), "fuente": "Consignatarias.com.ar",
+        "actualizado": ahora.isoformat(), "fuente": "Consignatarias.com.ar + Acción Rural",
         "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
         "periodo": {"desde": desde.isoformat(), "hasta": hasta.isoformat(), "dias": DIAS},
         "cantidad": len(remates), "remates": remates,
