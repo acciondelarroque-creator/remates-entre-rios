@@ -12,8 +12,8 @@
     header { padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2)); background:linear-gradient(120deg,#123c2e,#1f5943); }
     h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
     header p { margin:.45rem 0 0; color:#d4e5de; }
-    .marquesina { overflow:hidden; background:var(--acento); color:#16231e; font-weight:700; white-space:nowrap; }
-    .marquesina__texto { display:inline-block; padding:.75rem 0; min-width:100%; animation:desplazar 60s linear infinite; }
+    .marquesina { overflow:hidden; background:var(--acento); color:#16231e; font-weight:750; white-space:nowrap; }
+    .marquesina__texto { display:inline-block; padding:.85rem 0; min-width:100%; font-size:clamp(1.05rem,3vw,1.3rem); line-height:1.35; letter-spacing:.01em; animation:desplazar 70s linear infinite; }
     .marquesina:hover .marquesina__texto { animation-play-state:paused; }
     main { width:min(1100px,calc(100% - 2rem)); margin:2rem auto 3rem; }
     .estado { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; color:var(--suave); margin-bottom:1.25rem; }
@@ -27,6 +27,9 @@
     .vacio,.error { padding:1.25rem; border:1px dashed var(--borde); border-radius:.75rem; color:var(--suave); }
     footer { text-align:center; color:var(--suave); padding:1rem; font-size:.85rem; }
     @keyframes desplazar { from { transform:translateX(100%); } to { transform:translateX(-100%); } }
+    @media (max-width:600px) {
+      .marquesina__texto { font-size:1.18rem; padding:.9rem 0; }
+    }
     @media (prefers-reduced-motion:reduce) { .marquesina__texto { animation:none; padding-left:1rem; } }
   </style>
 </head>
@@ -53,13 +56,22 @@
   <script>
     const ARCHIVO = "remates.json";
     const INTERVALO = 5 * 60 * 1000;
+    const MESES_CORTOS = ["ene.", "feb.", "mar.", "abr.", "may.", "jun.", "jul.", "ago.", "sep.", "oct.", "nov.", "dic."];
 
     const texto = (valor) => valor || "Sin información";
+
     const fechaLegible = (fecha, hora) => {
       const valor = new Date(fecha + "T" + (hora || "00:00"));
       return Number.isNaN(valor) ? [fecha, hora].filter(Boolean).join(" · ") : new Intl.DateTimeFormat("es-AR", {
         weekday:"short", day:"2-digit", month:"long", hour:hora ? "2-digit" : undefined, minute:hora ? "2-digit" : undefined
       }).format(valor).replace(",", " ·");
+    };
+
+    // Formato más limpio y legible para la marquesina, especialmente en celulares.
+    const fechaMarquesina = (fecha, hora) => {
+      const valor = new Date(fecha + "T" + (hora || "00:00"));
+      if (Number.isNaN(valor)) return [fecha, hora].filter(Boolean).join(" · ");
+      return `${valor.getDate()} ${MESES_CORTOS[valor.getMonth()]}${hora ? ` · ${hora}` : ""}`;
     };
 
     function ordenar(remates) {
@@ -91,7 +103,7 @@
         ).join("");
 
         marquesina.textContent = remates.map((r) =>
-          `${fechaLegible(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`
+          `${fechaMarquesina(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`
         ).join("   •   ");
       }
 
