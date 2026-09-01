@@ -6,10 +6,14 @@
 <title>Remates</title>
 <style>
 html,body{margin:0;padding:0;width:100%;overflow:hidden}
-#marquesina{height:45px;line-height:45px;background:#f4b942;color:#16231e;font:700 16px/45px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap;overflow:hidden;text-align:center}
+#marquesina{height:48px;line-height:48px;background:#f4b942;color:#16231e;font:700 18px/48px system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap;overflow:hidden;text-align:center}
 #texto{display:inline-block}
 .mover{animation:desplazar 60s linear infinite}
 @keyframes desplazar{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+@media (max-width:600px){
+  #marquesina{height:54px;line-height:54px;font-size:20px;line-height:1.25;display:flex;align-items:center}
+  #texto{padding:0 12px}
+}
 </style>
 </head>
 <body>
@@ -17,7 +21,12 @@ html,body{margin:0;padding:0;width:100%;overflow:hidden}
 <script>
 const texto=document.getElementById('texto');
 const URL_JSON='remates.json';
-function fecha(f,h){const d=new Date(f+'T'+(h||'00:00'));return new Intl.DateTimeFormat('es-AR',{weekday:'short',day:'2-digit',month:'long',hour:h?'2-digit':undefined,minute:h?'2-digit':undefined}).format(d).replace(',',' ·');}
+const MESES_CORTOS=['ene.','feb.','mar.','abr.','may.','jun.','jul.','ago.','sep.','oct.','nov.','dic.'];
+function fecha(f,h){
+  const d=new Date(f+'T'+(h||'00:00'));
+  if(Number.isNaN(d.getTime())) return [f,h].filter(Boolean).join(' · ');
+  return `${d.getDate()} ${MESES_CORTOS[d.getMonth()]}${h?` · ${h}`:''}`;
+}
 async function cargar(){try{const r=await fetch(URL_JSON+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const d=await r.json();const a=(d.remates||[]).sort((x,y)=>(x.fecha||'').localeCompare(y.fecha||'')||(x.hora||'').localeCompare(y.hora||''));if(!a.length)return;texto.textContent=a.map(r=>`${fecha(r.fecha,r.hora)} · ${r.localidad||'Sin información'} · ${r.consignataria||'Sin información'}`).join('   •   ');texto.classList.add('mover');}catch(e){}}
 cargar();setInterval(cargar,300000);
 </script>
