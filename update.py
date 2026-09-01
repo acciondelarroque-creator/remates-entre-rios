@@ -22,7 +22,7 @@ MANUALES = [
         "localidad": "Basavilbaso",
         "provincia": "ENTRE RÍOS",
         "tipo": "reproductores",
-        "titulo": "Gran Remate de Reproductores y Vientres de Cabaña",
+        "titulo": "Gran Remate de Reproductores y Vientres",
         "cabezas_estimadas": None,
         "url_catalogo": None,
         "url_youtube": None,
@@ -121,7 +121,6 @@ def corregir_ubicacion_especifica(localidad, consignataria, titulo):
     """Correcciones conocidas de ubicación que la fuente puede devolver mal."""
     texto = normalizar(f"{consignataria} {titulo}")
     if "MENDIZABAL" in texto:
-        # Mendizábal Consignaciones realiza este remate en la Sociedad Rural de Gualeguay.
         return "Gualeguay"
     return localidad
 
@@ -177,7 +176,6 @@ def main():
             "url_youtube": item.get("youtube_url") or item.get("youtubeUrl"),
         })
 
-    # Incorporar los remates informados manualmente por Acción Rural.
     for manual in MANUALES:
         try:
             fecha_obj = datetime.strptime(manual["fecha"], "%Y-%m-%d").date()
