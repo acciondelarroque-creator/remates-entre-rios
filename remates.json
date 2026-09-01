@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-08-31T22:47:25.988557-03:00",
-  "fuente": "Consignatarias.com.ar",
+  "actualizado": "2026-08-31T23:20:00-03:00",
+  "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
     "desde": "2026-08-31",
     "hasta": "2026-09-21",
     "dias": 21
   },
-  "cantidad": 11,
+  "cantidad": 12,
   "remates": [
     {
       "id": 744,
@@ -148,6 +148,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "Remate de Gordo, Invernada y Cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "manual-2026-09-19-basavilbaso",
+      "fecha": "2026-09-19",
+      "hora": null,
+      "consignataria": "Cooperativa Ganadera El Pronunciamiento Ltda.",
+      "localidad": "Basavilbaso",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Gran Remate de Reproductores y Vientres de Cabaña",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
