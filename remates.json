@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-08-31T16:16:51.113647-03:00",
-  "fuente": "Consignatarias.com.ar",
+  "actualizado": "2026-08-31T22:46:00-03:00",
+  "fuente": "Consignatarias.com.ar + carga manual",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
     "desde": "2026-08-31",
     "hasta": "2026-09-21",
     "dias": 21
   },
-  "cantidad": 10,
+  "cantidad": 12,
   "remates": [
     {
       "id": 745,
@@ -137,6 +137,32 @@
       "titulo": "REMATE FERIA EN INSTALACIONES GENERAL RAMÍREZ",
       "cabezas_estimadas": null,
       "url_catalogo": "https://ftp.rural-server.com/remates/images/FBYrTHQrNUis3NrI.png",
+      "url_youtube": null
+    },
+    {
+      "id": 786,
+      "fecha": "2026-09-04",
+      "hora": null,
+      "consignataria": "Fraccarolli Ronconi",
+      "localidad": "Villa Elisa – Sociedad Rural Colón",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 787,
+      "fecha": "2026-09-18",
+      "hora": null,
+      "consignataria": "Fraccarolli Ronconi",
+      "localidad": "Ruta 20, km 30",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "liquidacion",
+      "titulo": "Liquidación Tambo La Sara",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
       "url_youtube": null
     }
   ]
