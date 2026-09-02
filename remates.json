@@ -1,55 +1,16 @@
 {
-  "actualizado": "2026-09-01T14:30:06.542109-03:00",
+  "actualizado": "2026-09-02T14:30:29.297767-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-01",
-    "hasta": "2026-09-22",
+    "desde": "2026-09-02",
+    "hasta": "2026-09-23",
     "dias": 21
   },
-  "cantidad": 12,
+  "cantidad": 11,
   "remates": [
     {
-      "id": 744,
-      "fecha": "2026-09-01",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "General Ramirez, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria Maria Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://ftp.rural-server.com/remates/images/GXAKzISJ6cnbNCwm.jpg",
-      "url_youtube": null
-    },
-    {
-      "id": 751,
-      "fecha": "2026-09-01",
-      "hora": "14:00",
-      "consignataria": "SÁENZ VALIENTE, BULLRICH Y CIA. S.A.",
-      "localidad": "Colon",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Angus, Brangus, Braford y Hereford 9° Remate Anual Cabaña LOS PRIMOS Cabaña LA MARÍA ELENA y Estab. DON CARLOS Auspicia Angus",
-      "cabezas_estimadas": 320,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 756,
-      "fecha": "2026-09-01",
-      "hora": "15:00",
-      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
-      "localidad": "Nogoyá",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "GORDO, INVERNADA y CRÍA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 768,
+      "id": 760,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "Edgar E. Pastore y Cía. S.R.L.",
@@ -59,10 +20,10 @@
       "titulo": "Bototí Picú - Angus Entrerriano - Pastore y Cía",
       "cabezas_estimadas": null,
       "url_catalogo": null,
-      "url_youtube": null
+      "url_youtube": "https://youtube.com/live/iAlDbmjU2fQ"
     },
     {
-      "id": 772,
+      "id": 764,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
@@ -75,7 +36,7 @@
       "url_youtube": null
     },
     {
-      "id": 773,
+      "id": 765,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "U.M.C. S.A.",
@@ -88,7 +49,7 @@
       "url_youtube": null
     },
     {
-      "id": 775,
+      "id": 767,
       "fecha": "2026-09-02",
       "hora": "14:00",
       "consignataria": "UMC SA - Haciendas Villaguay SRL",
@@ -101,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 777,
+      "id": 769,
       "fecha": "2026-09-02",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -114,7 +75,7 @@
       "url_youtube": null
     },
     {
-      "id": 783,
+      "id": 777,
       "fecha": "2026-09-03",
       "hora": "10:30",
       "consignataria": "Coop. La Ganadera",
@@ -127,7 +88,7 @@
       "url_youtube": null
     },
     {
-      "id": 791,
+      "id": 785,
       "fecha": "2026-09-03",
       "hora": "14:00",
       "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
@@ -140,7 +101,7 @@
       "url_youtube": null
     },
     {
-      "id": 792,
+      "id": 786,
       "fecha": "2026-09-03",
       "hora": "14:00",
       "consignataria": "U.M.C. S.A.",
@@ -150,6 +111,32 @@
       "titulo": "Remate de Gordo, Invernada y Cría",
       "cabezas_estimadas": null,
       "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 795,
+      "fecha": "2026-09-04",
+      "hora": "10:00",
+      "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
+      "localidad": "Villa Elisa",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "HACIENDAS GENERALES",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 798,
+      "fecha": "2026-09-04",
+      "hora": "14:00",
+      "consignataria": "Etchevehere Rural SRL",
+      "localidad": "General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Cabaña Malaika - Genética",
+      "cabezas_estimadas": null,
+      "url_catalogo": "https://ftp.rural-server.com/remates/images/wjAKCD1U7jwEIlQQ.jpg",
       "url_youtube": null
     },
     {
