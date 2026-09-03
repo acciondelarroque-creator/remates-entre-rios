@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-02T14:30:29.297767-03:00",
+  "actualizado": "2026-09-02T22:28:25.167246-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
@@ -7,75 +7,10 @@
     "hasta": "2026-09-23",
     "dias": 21
   },
-  "cantidad": 11,
+  "cantidad": 10,
   "remates": [
     {
-      "id": 760,
-      "fecha": "2026-09-02",
-      "hora": "14:00",
-      "consignataria": "Edgar E. Pastore y Cía. S.R.L.",
-      "localidad": "Estancia San Juan / Ruta 20 Km 36 / Urdinarrain, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Bototí Picú - Angus Entrerriano - Pastore y Cía",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": "https://youtube.com/live/iAlDbmjU2fQ"
-    },
-    {
-      "id": 764,
-      "fecha": "2026-09-02",
-      "hora": "14:00",
-      "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
-      "localidad": "Villaguay, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 765,
-      "fecha": "2026-09-02",
-      "hora": "14:00",
-      "consignataria": "U.M.C. S.A.",
-      "localidad": "Villaguay, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Remate de Gordo, Invernada y Cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 767,
-      "fecha": "2026-09-02",
-      "hora": "14:00",
-      "consignataria": "UMC SA - Haciendas Villaguay SRL",
-      "localidad": "Villaguay, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "UMC HV — Remate Feria",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 769,
-      "fecha": "2026-09-02",
-      "hora": "15:00",
-      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
-      "localidad": "Hasenkamp",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "GORDO, INVERNADA y CRÍA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 777,
+      "id": 772,
       "fecha": "2026-09-03",
       "hora": "10:30",
       "consignataria": "Coop. La Ganadera",
@@ -88,7 +23,7 @@
       "url_youtube": null
     },
     {
-      "id": 785,
+      "id": 781,
       "fecha": "2026-09-03",
       "hora": "14:00",
       "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
@@ -101,7 +36,7 @@
       "url_youtube": null
     },
     {
-      "id": 786,
+      "id": 782,
       "fecha": "2026-09-03",
       "hora": "14:00",
       "consignataria": "U.M.C. S.A.",
@@ -114,7 +49,7 @@
       "url_youtube": null
     },
     {
-      "id": 795,
+      "id": 793,
       "fecha": "2026-09-04",
       "hora": "10:00",
       "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
@@ -127,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 798,
+      "id": 796,
       "fecha": "2026-09-04",
       "hora": "14:00",
       "consignataria": "Etchevehere Rural SRL",
@@ -137,6 +72,58 @@
       "titulo": "Cabaña Malaika - Genética",
       "cabezas_estimadas": null,
       "url_catalogo": "https://ftp.rural-server.com/remates/images/wjAKCD1U7jwEIlQQ.jpg",
+      "url_youtube": null
+    },
+    {
+      "id": 807,
+      "fecha": "2026-09-05",
+      "hora": "14:00",
+      "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
+      "localidad": "Durazno",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "invernada",
+      "titulo": "Gordo, Invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 808,
+      "fecha": "2026-09-05",
+      "hora": "14:00",
+      "consignataria": "U.M.C. S.A.",
+      "localidad": "Durazno",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "invernada",
+      "titulo": "Gordo, Invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 806,
+      "fecha": "2026-09-05",
+      "hora": "14:00",
+      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
+      "localidad": "Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "especial",
+      "titulo": "Sábado 5 y Domingo 6 Especial EXPO GUALEGUAY",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 817,
+      "fecha": "2026-09-08",
+      "hora": "09:30",
+      "consignataria": "Etchevehere Rural",
+      "localidad": "General Ramirez, Entre Rios",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria Maria Dolores",
+      "cabezas_estimadas": null,
+      "url_catalogo": "https://ftp.rural-server.com/remates/images/3yLasuVdEF9wWJET.jpg",
       "url_youtube": null
     },
     {
