@@ -67,11 +67,11 @@
       }).format(valor).replace(",", " ·");
     };
 
-    // Formato más limpio y legible para la marquesina, especialmente en celulares.
+    // Formato más limpio para la marquesina: mayúsculas y espacio no separable entre día y mes.
     const fechaMarquesina = (fecha, hora) => {
       const valor = new Date(fecha + "T" + (hora || "00:00"));
       if (Number.isNaN(valor)) return [fecha, hora].filter(Boolean).join(" · ");
-      return `${valor.getDate()} ${MESES_CORTOS[valor.getMonth()]}${hora ? ` · ${hora}` : ""}`;
+      return `${valor.getDate()}\u00A0${MESES_CORTOS[valor.getMonth()].toUpperCase()}${hora ? ` · ${hora}` : ""}`;
     };
 
     function ordenar(remates) {
@@ -103,7 +103,7 @@
         ).join("");
 
         marquesina.textContent = remates.map((r) =>
-          `${fechaMarquesina(r.fecha, r.hora)} · ${texto(r.localidad)} · ${texto(r.consignataria)}`
+          `${fechaMarquesina(r.fecha, r.hora)} · ${texto(r.localidad).toUpperCase()} · ${texto(r.consignataria)}`
         ).join("   •   ");
       }
 
