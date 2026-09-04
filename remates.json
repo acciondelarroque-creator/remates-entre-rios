@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-09-03T23:19:15.652133-03:00",
+  "actualizado": "2026-09-04T14:29:41.787557-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-03",
-    "hasta": "2026-09-24",
+    "desde": "2026-09-04",
+    "hasta": "2026-09-25",
     "dias": 21
   },
-  "cantidad": 35,
+  "cantidad": 37,
   "remates": [
     {
       "id": 785,
@@ -460,6 +460,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Haciendas Generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "manual-2026-09-25-gualeguaychu",
+      "fecha": "2026-09-25",
+      "hora": null,
+      "consignataria": "Daroca y Buschiazzo",
+      "localidad": "Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas Generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "manual-2026-09-25-tala",
+      "fecha": "2026-09-25",
+      "hora": null,
+      "consignataria": "Feria Don Luis",
+      "localidad": "Rosario del Tala",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Reproductores y Vientres",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
