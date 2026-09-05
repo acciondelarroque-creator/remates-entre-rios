@@ -1,68 +1,16 @@
 {
-  "actualizado": "2026-09-04T14:29:41.787557-03:00",
+  "actualizado": "2026-09-05T14:28:35.793145-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-25",
+    "desde": "2026-09-05",
+    "hasta": "2026-09-26",
     "dias": 21
   },
-  "cantidad": 37,
+  "cantidad": 35,
   "remates": [
     {
       "id": 785,
-      "fecha": "2026-09-04",
-      "hora": "10:00",
-      "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
-      "localidad": "Villa Elisa",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "HACIENDAS GENERALES",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 788,
-      "fecha": "2026-09-04",
-      "hora": "14:00",
-      "consignataria": "Etchevehere Rural SRL",
-      "localidad": "General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Cabaña Malaika - Genética",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://ftp.rural-server.com/remates/images/wjAKCD1U7jwEIlQQ.jpg",
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-04-maria-dolores",
-      "fecha": "2026-09-04",
-      "hora": null,
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Cabaña Malaika",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-04-rosario",
-      "fecha": "2026-09-04",
-      "hora": null,
-      "consignataria": "Ildarraz Hermanos",
-      "localidad": "Rosario",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Remate Habitual Rosgan",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 799,
       "fecha": "2026-09-05",
       "hora": "14:00",
       "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
@@ -75,7 +23,7 @@
       "url_youtube": null
     },
     {
-      "id": 800,
+      "id": 786,
       "fecha": "2026-09-05",
       "hora": "14:00",
       "consignataria": "U.M.C. S.A.",
@@ -88,7 +36,7 @@
       "url_youtube": null
     },
     {
-      "id": 798,
+      "id": 784,
       "fecha": "2026-09-05",
       "hora": "14:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -166,7 +114,7 @@
       "url_youtube": null
     },
     {
-      "id": 812,
+      "id": 799,
       "fecha": "2026-09-08",
       "hora": "09:30",
       "consignataria": "Etchevehere Rural",
@@ -179,7 +127,7 @@
       "url_youtube": null
     },
     {
-      "id": 820,
+      "id": 808,
       "fecha": "2026-09-08",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
@@ -192,7 +140,7 @@
       "url_youtube": null
     },
     {
-      "id": 828,
+      "id": 816,
       "fecha": "2026-09-09",
       "hora": "10:00",
       "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
@@ -202,6 +150,32 @@
       "titulo": "HACIENDAS GENERALES",
       "cabezas_estimadas": null,
       "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 826,
+      "fecha": "2026-09-09",
+      "hora": "15:00",
+      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
+      "localidad": "Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "invernada",
+      "titulo": "GORDO, INVERNADA y CRÍA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 825,
+      "fecha": "2026-09-09",
+      "hora": "15:00",
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "Villaguay, Entre Rios",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "REMATE FERIA 5 BOCAS - PASO DE LA LAGUNA",
+      "cabezas_estimadas": null,
+      "url_catalogo": "https://ftp.rural-server.com/remates/images/dV9HmqPEWcecjsKE.png",
       "url_youtube": null
     },
     {
