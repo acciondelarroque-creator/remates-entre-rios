@@ -1,79 +1,14 @@
 {
-  "actualizado": "2026-09-05T14:28:35.793145-03:00",
+  "actualizado": "2026-09-06T14:29:16.765688-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-05",
-    "hasta": "2026-09-26",
+    "desde": "2026-09-06",
+    "hasta": "2026-09-27",
     "dias": 21
   },
-  "cantidad": 35,
+  "cantidad": 30,
   "remates": [
-    {
-      "id": 785,
-      "fecha": "2026-09-05",
-      "hora": "14:00",
-      "consignataria": "HACIENDAS VILLAGUAY S.R.L.",
-      "localidad": "Durazno",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Gordo, Invernada y cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 786,
-      "fecha": "2026-09-05",
-      "hora": "14:00",
-      "consignataria": "U.M.C. S.A.",
-      "localidad": "Durazno",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "Gordo, Invernada y cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 784,
-      "fecha": "2026-09-05",
-      "hora": "14:00",
-      "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
-      "localidad": "Gualeguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "especial",
-      "titulo": "Sábado 5 y Domingo 6 Especial EXPO GUALEGUAY",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-05-gualeguay",
-      "fecha": "2026-09-05",
-      "hora": null,
-      "consignataria": "Consignataria Hasenkamp",
-      "localidad": "Gualeguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "especial",
-      "titulo": "Especial Faena – Expo Gualeguay",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-05-urdinarrain",
-      "fecha": "2026-09-05",
-      "hora": null,
-      "consignataria": "Ildarraz Hermanos",
-      "localidad": "Urdinarrain",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Reproductores – Angus de Primera",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
     {
       "id": "manual-2026-09-06-gualeguay",
       "fecha": "2026-09-06",
@@ -114,7 +49,7 @@
       "url_youtube": null
     },
     {
-      "id": 799,
+      "id": 789,
       "fecha": "2026-09-08",
       "hora": "09:30",
       "consignataria": "Etchevehere Rural",
@@ -127,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 808,
+      "id": 798,
       "fecha": "2026-09-08",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
@@ -140,7 +75,7 @@
       "url_youtube": null
     },
     {
-      "id": 816,
+      "id": 806,
       "fecha": "2026-09-09",
       "hora": "10:00",
       "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
@@ -153,7 +88,7 @@
       "url_youtube": null
     },
     {
-      "id": 826,
+      "id": 817,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -166,7 +101,7 @@
       "url_youtube": null
     },
     {
-      "id": 825,
+      "id": 816,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
