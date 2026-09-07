@@ -1,40 +1,14 @@
 {
-  "actualizado": "2026-09-06T14:29:16.765688-03:00",
+  "actualizado": "2026-09-07T14:31:38.557892-03:00",
   "fuente": "Consignatarias.com.ar + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-06",
-    "hasta": "2026-09-27",
+    "desde": "2026-09-07",
+    "hasta": "2026-09-28",
     "dias": 21
   },
-  "cantidad": 30,
+  "cantidad": 29,
   "remates": [
-    {
-      "id": "manual-2026-09-06-gualeguay",
-      "fecha": "2026-09-06",
-      "hora": null,
-      "consignataria": "Consignataria Hasenkamp",
-      "localidad": "Gualeguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Especial Reproductores – Expo Gualeguay",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-06-lapaz",
-      "fecha": "2026-09-06",
-      "hora": null,
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "La Paz",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Haciendas Generales",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
     {
       "id": "manual-2026-09-08-maria-dolores",
       "fecha": "2026-09-08",
@@ -49,7 +23,7 @@
       "url_youtube": null
     },
     {
-      "id": 789,
+      "id": 787,
       "fecha": "2026-09-08",
       "hora": "09:30",
       "consignataria": "Etchevehere Rural",
@@ -62,7 +36,20 @@
       "url_youtube": null
     },
     {
-      "id": 798,
+      "id": 795,
+      "fecha": "2026-09-08",
+      "hora": "13:30",
+      "consignataria": "COLOMBO Y MAGLIANO S.A.",
+      "localidad": "Villaguay, Entre Rios",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Gran Remate Anual LITORANGUS Cabaña Santa Juana por Canal Rural",
+      "cabezas_estimadas": null,
+      "url_catalogo": "https://remates.elrural.com/remate/6564-colombo-y-magliano-litorangus-2026",
+      "url_youtube": null
+    },
+    {
+      "id": 796,
       "fecha": "2026-09-08",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
@@ -75,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 806,
+      "id": 807,
       "fecha": "2026-09-09",
       "hora": "10:00",
       "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
@@ -88,7 +75,7 @@
       "url_youtube": null
     },
     {
-      "id": 817,
+      "id": 818,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -101,7 +88,7 @@
       "url_youtube": null
     },
     {
-      "id": 816,
+      "id": 817,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
