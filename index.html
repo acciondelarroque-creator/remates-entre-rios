@@ -12,9 +12,125 @@
     header { padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2)); background:linear-gradient(120deg,#123c2e,#1f5943); }
     h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
     header p { margin:.45rem 0 0; color:#d4e5de; }
-    .marquesina { overflow:hidden; background:var(--acento); color:#16231e; font-weight:750; white-space:nowrap; }
-    .marquesina__texto { display:inline-block; padding:.85rem 0; min-width:100%; font-size:clamp(1.05rem,3vw,1.3rem); line-height:1.35; letter-spacing:.01em; animation:desplazar 70s linear infinite; }
-    .marquesina:hover .marquesina__texto { animation-play-state:paused; }
+
+    /* MARQUESINA: panel fijo + carrusel táctil */
+    .marquesina {
+      position:relative;
+      display:flex;
+      align-items:stretch;
+      width:100%;
+      background:#111;
+      color:#fff;
+      overflow:hidden;
+      min-height:76px;
+    }
+    .marquesina__fija {
+      position:relative;
+      z-index:3;
+      flex:0 0 clamp(145px,18vw,205px);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:10px 16px;
+      background:#111;
+      border-right:1px solid #343434;
+      box-shadow:8px 0 18px rgba(0,0,0,.28);
+    }
+    .marquesina__fija strong {
+      font-size:clamp(1rem,2.1vw,1.28rem);
+      line-height:1.05;
+      letter-spacing:.01em;
+    }
+    .marquesina__fija span {
+      margin-top:5px;
+      font-size:.72rem;
+      font-weight:650;
+      color:#bdbdbd;
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+    .marquesina__zona {
+      position:relative;
+      flex:1;
+      min-width:0;
+      overflow:hidden;
+    }
+    .marquesina__scroll {
+      display:flex;
+      align-items:stretch;
+      width:max-content;
+      height:100%;
+      overflow-x:auto;
+      overscroll-behavior-x:contain;
+      scroll-behavior:smooth;
+      scrollbar-width:none;
+      -webkit-overflow-scrolling:touch;
+      touch-action:pan-x;
+      padding:0 48px;
+    }
+    .marquesina__scroll::-webkit-scrollbar { display:none; }
+    .remate-item {
+      flex:0 0 auto;
+      min-width:210px;
+      max-width:285px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:9px 22px;
+      border-right:1px solid #383838;
+      background:#1b1b1b;
+    }
+    .remate-item .fecha {
+      color:var(--acento);
+      font-size:1.02rem;
+      line-height:1.05;
+      font-weight:850;
+    }
+    .remate-item .lugar {
+      margin-top:4px;
+      color:#fff;
+      font-size:.92rem;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+    .remate-item .consignataria {
+      margin-top:2px;
+      color:#c8c8c8;
+      font-size:.76rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .marquesina__flecha {
+      position:absolute;
+      z-index:4;
+      top:50%;
+      transform:translateY(-50%);
+      width:34px;
+      height:48px;
+      border:0;
+      border-radius:7px;
+      background:rgba(0,0,0,.72);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 1px 8px rgba(0,0,0,.35);
+    }
+    .marquesina__flecha::before {
+      content:"";
+      width:10px;
+      height:10px;
+      border-top:3px solid #fff;
+      border-right:3px solid #fff;
+    }
+    .marquesina__flecha--izq { left:7px; }
+    .marquesina__flecha--izq::before { transform:rotate(-135deg); margin-left:5px; }
+    .marquesina__flecha--der { right:7px; }
+    .marquesina__flecha--der::before { transform:rotate(45deg); margin-right:5px; }
+    .marquesina__flecha:hover { background:rgba(0,0,0,.9); }
+    .marquesina__flecha:focus-visible { outline:2px solid var(--acento); outline-offset:2px; }
+
     main { width:min(1100px,calc(100% - 2rem)); margin:2rem auto 3rem; }
     .estado { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; color:var(--suave); margin-bottom:1.25rem; }
     .punto { width:.65rem; height:.65rem; border-radius:50%; background:#44d384; display:inline-block; }
@@ -26,11 +142,16 @@
     .tipo { display:inline-block; margin-top:.8rem; padding:.25rem .55rem; border-radius:999px; background:#24483b; color:#dff1e9; font-size:.78rem; text-transform:capitalize; }
     .vacio,.error { padding:1.25rem; border:1px dashed var(--borde); border-radius:.75rem; color:var(--suave); }
     footer { text-align:center; color:var(--suave); padding:1rem; font-size:.85rem; }
-    @keyframes desplazar { from { transform:translateX(100%); } to { transform:translateX(-100%); } }
+
     @media (max-width:600px) {
-      .marquesina__texto { font-size:1.18rem; padding:.9rem 0; }
+      .marquesina { min-height:72px; }
+      .marquesina__fija { flex-basis:138px; padding:9px 12px; }
+      .marquesina__fija strong { font-size:1rem; }
+      .marquesina__fija span { font-size:.64rem; }
+      .marquesina__scroll { padding-left:40px; padding-right:40px; }
+      .remate-item { min-width:195px; padding:8px 17px; }
+      .marquesina__flecha { width:30px; height:44px; }
     }
-    @media (prefers-reduced-motion:reduce) { .marquesina__texto { animation:none; padding-left:1rem; } }
   </style>
 </head>
 <body>
@@ -40,7 +161,17 @@
   </header>
 
   <section class="marquesina" aria-label="Próximos remates">
-    <div id="marquesina" class="marquesina__texto">Cargando próximos remates…</div>
+    <div class="marquesina__fija">
+      <strong>Remates en<br>Entre Ríos</strong>
+      <span>Próximas fechas</span>
+    </div>
+    <div class="marquesina__zona">
+      <button class="marquesina__flecha marquesina__flecha--izq" id="flechaIzq" aria-label="Ver remates anteriores"></button>
+      <div id="marquesina" class="marquesina__scroll" tabindex="0" aria-label="Deslizá para ver las próximas fechas">
+        <div class="remate-item"><div class="fecha">Cargando…</div><div class="lugar">Próximos remates</div></div>
+      </div>
+      <button class="marquesina__flecha marquesina__flecha--der" id="flechaDer" aria-label="Ver más remates"></button>
+    </div>
   </section>
 
   <main>
@@ -67,11 +198,10 @@
       }).format(valor).replace(",", " ·");
     };
 
-    // Formato más limpio para la marquesina: mayúsculas y espacio no separable entre día y mes.
     const fechaMarquesina = (fecha, hora) => {
       const valor = new Date(fecha + "T" + (hora || "00:00"));
       if (Number.isNaN(valor)) return [fecha, hora].filter(Boolean).join(" · ");
-      return `${valor.getDate()}\u00A0${MESES_CORTOS[valor.getMonth()].toUpperCase()}${hora ? ` · ${hora}` : ""}`;
+      return `${String(valor.getDate()).padStart(2,"0")} ${MESES_CORTOS[valor.getMonth()].toUpperCase()}${hora ? ` · ${hora}` : ""}`;
     };
 
     function ordenar(remates) {
@@ -83,6 +213,23 @@
       );
     }
 
+    function actualizarFlechas() {
+      const zona = document.querySelector("#marquesina");
+      const izq = document.querySelector("#flechaIzq");
+      const der = document.querySelector("#flechaDer");
+      const puedeMover = zona.scrollWidth > zona.clientWidth + 2;
+      izq.style.display = puedeMover ? "flex" : "none";
+      der.style.display = puedeMover ? "flex" : "none";
+    }
+
+    function mover(direccion) {
+      const zona = document.querySelector("#marquesina");
+      zona.scrollBy({ left: direccion * Math.max(260, zona.clientWidth * .72), behavior:"smooth" });
+    }
+
+    document.querySelector("#flechaIzq").addEventListener("click", () => mover(-1));
+    document.querySelector("#flechaDer").addEventListener("click", () => mover(1));
+
     function mostrar(remates, actualizado) {
       const lista = document.querySelector("#lista");
       const marquesina = document.querySelector("#marquesina");
@@ -90,7 +237,7 @@
 
       if (!remates.length) {
         lista.innerHTML = '<p class="vacio">No hay próximos remates informados por el momento.</p>';
-        marquesina.textContent = "No hay próximos remates informados por el momento.";
+        marquesina.innerHTML = '<div class="remate-item"><div class="fecha">Sin fechas</div><div class="lugar">No hay próximos remates</div></div>';
       } else {
         lista.innerHTML = remates.map((r) => `
           <article>
@@ -102,13 +249,17 @@
           </article>`
         ).join("");
 
-        marquesina.textContent = remates.map((r) =>
-          `${fechaMarquesina(r.fecha, r.hora)} · ${texto(r.localidad).toUpperCase()} · ${texto(r.consignataria)}`
-        ).join("   •   ");
+        marquesina.innerHTML = remates.map((r) => `
+          <div class="remate-item">
+            <div class="fecha">${fechaMarquesina(r.fecha, r.hora)}</div>
+            <div class="lugar">${texto(r.localidad)}</div>
+            <div class="consignataria">${texto(r.consignataria)}</div>
+          </div>`).join("");
       }
 
       const momento = actualizado ? new Date(actualizado) : null;
       estado.textContent = `${remates.length} remates próximos${momento && !Number.isNaN(momento) ? " · datos actualizados " + momento.toLocaleString("es-AR") : ""}`;
+      requestAnimationFrame(actualizarFlechas);
     }
 
     async function actualizar() {
@@ -123,6 +274,7 @@
       }
     }
 
+    window.addEventListener("resize", actualizarFlechas);
     actualizar();
     setInterval(actualizar, INTERVALO);
   </script>
