@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-08T16:40:29.817632-03:00",
+  "actualizado": "2026-09-08T20:59:53.902532-03:00",
   "fuente": "Consignatarias.com.ar + Etchevehere Rural + Consignataria Hasenkamp + La Ganadera + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
@@ -10,7 +10,7 @@
   "cantidad": 54,
   "remates": [
     {
-      "id": 781,
+      "id": 767,
       "fecha": "2026-09-08",
       "hora": "09:30",
       "consignataria": "Etchevehere Rural",
@@ -36,7 +36,7 @@
       "url_youtube": null
     },
     {
-      "id": 791,
+      "id": 777,
       "fecha": "2026-09-08",
       "hora": "13:30",
       "consignataria": "COLOMBO Y MAGLIANO S.A.",
@@ -49,7 +49,7 @@
       "url_youtube": null
     },
     {
-      "id": 793,
+      "id": 780,
       "fecha": "2026-09-08",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
@@ -62,7 +62,7 @@
       "url_youtube": null
     },
     {
-      "id": 804,
+      "id": 791,
       "fecha": "2026-09-09",
       "hora": "10:00",
       "consignataria": "FRACCAROLLI Y RONCONI S.R.L.",
@@ -75,7 +75,7 @@
       "url_youtube": null
     },
     {
-      "id": 816,
+      "id": 804,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "CONSIGNATARIA HASENKAMP S.R.L.",
@@ -88,7 +88,7 @@
       "url_youtube": null
     },
     {
-      "id": 815,
+      "id": 803,
       "fecha": "2026-09-09",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
