@@ -2,43 +2,60 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Acción Rural - Remates</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Remates en Entre Ríos</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;width:100%;overflow:hidden;background:#fff}
-body{font-family:Georgia,"Times New Roman",serif}
-.marquesina{position:relative;width:100%;overflow:hidden;white-space:nowrap;background:#111;color:#eee;height:40px;line-height:40px}
-.marquesina__fija{position:absolute;z-index:5;left:0;top:0;height:40px;width:150px;display:flex;align-items:center;padding:0 8px;background:#111;border-right:1px solid rgba(255,255,255,.35);box-shadow:7px 0 12px rgba(0,0,0,.28);line-height:normal}
-.marquesina__fija strong{width:100%;display:flex;flex-direction:column;justify-content:center;line-height:1;font-size:15px;font-weight:700;letter-spacing:.2px;color:#fff}
-.marquesina__zona{position:absolute;left:150px;right:0;top:0;height:40px;overflow:hidden;touch-action:pan-x;background:#6b1f2b}
-.marquesina__scroll{position:absolute;left:0;top:0;width:100%;min-width:0;max-width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;cursor:grab;background:#6b1f2b;padding-left:22px}
-.marquesina__scroll::-webkit-scrollbar{display:none}
-.remate-item{display:inline-flex;align-items:center;gap:7px;padding:0 20px;height:40px;border-right:1px solid rgba(255,255,255,.28);font-family:Georgia,"Times New Roman",serif;font-size:14px;font-weight:600;flex:0 0 auto;color:#fff}
-.remate-item .fecha{color:#fff;font-weight:800}.remate-item .lugar{color:#fff;font-weight:700;text-transform:uppercase}.remate-item .consignataria{color:#f0dfe2;font-size:11px}
-.marquesina__flecha{position:absolute;z-index:6;top:0;width:38px;height:40px;display:flex;align-items:center;justify-content:center;pointer-events:none;background:linear-gradient(to right,rgba(107,31,43,.96),rgba(107,31,43,0));color:#fff;opacity:1;transition:opacity .25s}
-.marquesina__flecha--izq{left:0;background:linear-gradient(to right,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}.marquesina__flecha--der{right:0;background:linear-gradient(to left,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
-.marquesina__flecha span{display:block;width:10px;height:10px;border-top:2px solid #fff;border-right:2px solid #fff;line-height:0;font-size:0;flex:0 0 10px}.marquesina__flecha--izq span{transform:rotate(-135deg);animation:slideHintLeft 1.5s ease-in-out infinite}.marquesina__flecha--der span{transform:rotate(45deg);animation:slideHint 1.5s ease-in-out infinite}
-@keyframes slideHint{0%,100%{margin-left:0;opacity:.55}50%{margin-left:6px;opacity:1}}@keyframes slideHintLeft{0%,100%{margin-left:0;opacity:.55}50%{margin-left:-6px;opacity:1}}
-main{width:min(1100px,calc(100% - 2rem));margin:2rem auto 3rem;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}header{padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2));background:linear-gradient(120deg,#123c2e,#1f5943);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}header h1{margin:0;font-size:clamp(1.6rem,4vw,2.7rem);color:#f4f7f5}header p{margin:.45rem 0 0;color:#d4e5de}.estado{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;color:#666;margin-bottom:1.25rem}.punto{width:.65rem;height:.65rem;border-radius:50%;background:#44d384;display:inline-block}.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}article{border:1px solid #2d4a40;border-radius:.85rem;padding:1.1rem;background:#152a24;box-shadow:0 8px 24px #0002;color:#f4f7f5}.fecha{color:#f4b942;font-weight:800;font-size:1.1rem}article h2{font-size:1rem;margin:.7rem 0 .35rem}article p{margin:.25rem 0}.tipo{display:inline-block;margin-top:.8rem;padding:.25rem .55rem;border-radius:999px;background:#24483b;color:#dff1e9;font-size:.78rem;text-transform:capitalize}.vacio,.error{padding:1.25rem;border:1px dashed #2d4a40;border-radius:.75rem;color:#666}footer{text-align:center;color:#666;padding:1rem;font-size:.85rem;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}
-@media(max-width:600px){.marquesina__fija{width:126px;height:40px;padding:0 8px}.marquesina__zona{left:126px;height:40px}.marquesina__scroll{height:40px;padding-left:22px}.remate-item{height:40px;padding:0 14px;font-size:12px;gap:6px}.remate-item .consignataria{font-size:10px}.marquesina__flecha{height:40px;width:38px}.marquesina__fija strong{font-size:12px}}
+html,body{margin:0;padding:0;width:100%;height:40px;overflow:hidden}
+body{font-family:Georgia,"Times New Roman",serif;background:#111}
+.marquesina{position:relative;width:100%;height:40px;overflow:hidden;white-space:nowrap;background:#111;color:#fff}
+.fija{position:absolute;z-index:10;left:0;top:0;width:150px;height:40px;display:flex;align-items:center;padding:0 9px;background:#111;border-right:1px solid rgba(255,255,255,.35);box-shadow:7px 0 12px rgba(0,0,0,.28)}
+.fija strong{display:flex;flex-direction:column;justify-content:center;line-height:1;font-size:15px;letter-spacing:.15px;color:#fff}
+.zona{position:absolute;left:150px;right:0;top:0;height:40px;overflow:hidden;background:#6b1f2b}
+.scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:22px;cursor:grab}
+.scroll::-webkit-scrollbar{display:none}
+.item{display:inline-flex;align-items:center;gap:7px;height:40px;flex:0 0 auto;padding:0 20px;border-right:1px solid rgba(255,255,255,.28);color:#fff;font-size:14px;font-weight:600}
+.item .fecha{font-weight:800;color:#fff}.item .lugar{font-weight:700;text-transform:uppercase;color:#fff}.item .cons{font-size:11px;color:#f0dfe2}
+.flecha{position:absolute;z-index:20;top:0;width:38px;height:40px;display:none;align-items:center;justify-content:center;pointer-events:none;color:#fff}
+.flecha.izq{left:0;background:linear-gradient(to right,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
+.flecha.der{right:0;background:linear-gradient(to left,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
+.flecha span{display:block;width:10px;height:10px;border-top:2px solid #fff;border-right:2px solid #fff}
+.izq span{transform:rotate(-135deg)}.der span{transform:rotate(45deg)}
+@media(max-width:600px){.fija{width:126px;padding:0 8px}.fija strong{font-size:12px}.zona{left:126px}.scroll{padding-left:22px}.item{padding:0 14px;font-size:12px;gap:6px}.item .cons{font-size:10px}.flecha{width:38px}}
 </style>
 </head>
 <body>
-<header><h1>Remates de Entre Ríos</h1><p>Calendario actualizado automáticamente de próximos remates ganaderos.</p></header>
-<section class="marquesina" aria-label="Próximos remates"><div class="marquesina__fija"><strong>Remates en<br>Entre Ríos</strong></div><div class="marquesina__zona"><button class="marquesina__flecha marquesina__flecha--izq" id="flechaIzq" aria-label="Ver remates anteriores"><span></span></button><div id="marquesina" class="marquesina__scroll" tabindex="0" aria-label="Deslizá para ver las próximas fechas"><div class="remate-item"><span>Cargando…</span></div></div><button class="marquesina__flecha marquesina__flecha--der" id="flechaDer" aria-label="Ver más remates"><span></span></button></div></section>
-<main><div class="estado"><span class="punto" aria-hidden="true"></span><span id="estado">Cargando información…</span></div><section id="lista" class="lista" aria-live="polite"></section></main><footer>Fuente: calendario de remates de Entre Ríos · Actualización automática</footer>
+<div class="marquesina" aria-label="Próximos remates">
+  <div class="fija"><strong>Remates en<br>Entre Ríos</strong></div>
+  <div class="zona">
+    <div id="izq" class="flecha izq"><span></span></div>
+    <div id="scroll" class="scroll" aria-label="Deslizá para ver las próximas fechas">
+      <div class="item"><span>Cargando remates…</span></div>
+    </div>
+    <div id="der" class="flecha der"><span></span></div>
+  </div>
+</div>
 <script>
-const ARCHIVO="https://raw.githubusercontent.com/acciondelarroque-creator/remates-entre-rios/main/remates.json",INTERVALO=5*60*1000,MESES_CORTOS=["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic."];const texto=v=>v||"Sin información";
-const fechaLegible=(fecha,hora)=>{const v=new Date(fecha+"T"+(hora||"00:00"));return Number.isNaN(v)?[fecha,hora].filter(Boolean).join(" · "):new Intl.DateTimeFormat("es-AR",{weekday:"short",day:"2-digit",month:"long",hour:hora?"2-digit":undefined,minute:hora?"2-digit":undefined}).format(v).replace(","," ·")};
-const fechaMarquesina=(fecha,hora)=>{const v=new Date(fecha+"T"+(hora||"00:00"));if(Number.isNaN(v))return[fecha,hora].filter(Boolean).join(" · ");return`${String(v.getDate()).padStart(2,"0")} ${MESES_CORTOS[v.getMonth()].toUpperCase()}${hora?` · ${hora}`:""}`};
-function ordenar(remates){return[...remates].sort((a,b)=>(a.fecha||"").localeCompare(b.fecha||"")||(a.hora||"").localeCompare(b.hora||"")||(a.localidad||"").localeCompare(b.localidad||"","es")||(a.consignataria||"").localeCompare(b.consignataria||"","es"))}
-function actualizarFlechas(){const zona=document.querySelector("#marquesina"),izq=document.querySelector("#flechaIzq"),der=document.querySelector("#flechaDer"),puede=zona.scrollWidth>zona.clientWidth+2;izq.style.display=puede?"flex":"none";der.style.display=puede?"flex":"none"}
-function mover(direccion){document.querySelector("#marquesina").scrollBy({left:direccion*Math.max(260,document.querySelector("#marquesina").clientWidth*.72),behavior:"smooth"})}
-document.querySelector("#flechaIzq").addEventListener("click",()=>mover(-1));document.querySelector("#flechaDer").addEventListener("click",()=>mover(1));
-function mostrar(remates,actualizado){const lista=document.querySelector("#lista"),marquesina=document.querySelector("#marquesina"),estado=document.querySelector("#estado");if(!remates.length){lista.innerHTML='<p class="vacio">No hay próximos remates informados por el momento.</p>';marquesina.innerHTML='<div class="remate-item"><span>Sin fechas</span></div>'}else{lista.innerHTML=remates.map(r=>`<article><div class="fecha">${fechaLegible(r.fecha,r.hora)}</div><h2>${texto(r.localidad)}</h2><p>${texto(r.consignataria)}</p>${r.titulo?`<p>${r.titulo}</p>`:""}<span class="tipo">${texto(r.tipo)}</span></article>`).join("");marquesina.innerHTML=remates.map(r=>`<div class="remate-item"><span class="fecha">${fechaMarquesina(r.fecha,r.hora)}</span><span class="lugar">${texto(r.localidad)}</span><span class="consignataria">${texto(r.consignataria)}</span></div>`).join("")}const momento=actualizado?new Date(actualizado):null;estado.textContent=`${remates.length} remates próximos${momento&&!Number.isNaN(momento)?" · datos actualizados "+momento.toLocaleString("es-AR"):""}`;requestAnimationFrame(actualizarFlechas)}
-async function actualizar(){try{const respuesta=await fetch(`${ARCHIVO}?v=${Date.now()}`,{cache:"no-store"});if(!respuesta.ok)throw new Error("No se pudo leer el calendario.");const datos=await respuesta.json();mostrar(ordenar(datos.remates||[]),datos.actualizado)}catch(error){document.querySelector("#estado").textContent="No fue posible actualizar el calendario.";document.querySelector("#lista").innerHTML='<p class="error">Reintentaremos la conexión automáticamente.</p>'}}
-window.addEventListener("resize",actualizarFlechas);actualizar();setInterval(actualizar,INTERVALO);
+const JSON_URL='https://raw.githubusercontent.com/acciondelarroque-creator/remates-entre-rios/main/remates.json';
+const MESES=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+const scroll=document.getElementById('scroll'),izq=document.getElementById('izq'),der=document.getElementById('der');
+function ordenar(a){return [...a].sort((x,y)=>(x.fecha||'').localeCompare(y.fecha||'')||(x.hora||'').localeCompare(y.hora||'')||(x.localidad||'').localeCompare(y.localidad||'','es')||(x.consignataria||'').localeCompare(y.consignataria||'','es'))}
+function fecha(r){const d=new Date((r.fecha||'')+'T'+(r.hora||'00:00'));if(Number.isNaN(d.getTime()))return r.fecha||'';return `${String(d.getDate()).padStart(2,'0')} ${MESES[d.getMonth()]}${r.hora?' · '+r.hora:''}`}
+function flechas(){const ok=scroll.scrollWidth>scroll.clientWidth+2;izq.style.display=ok?'flex':'none';der.style.display=ok?'flex':'none'}
+function mover(n){scroll.scrollBy({left:n*Math.max(260,scroll.clientWidth*.72),behavior:'smooth'})}
+der.addEventListener('click',()=>mover(1));izq.addEventListener('click',()=>mover(-1));
+async function cargar(){
+ try{
+  const r=await fetch(JSON_URL+'?v='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  const datos=await r.json();
+  const remates=ordenar(datos.remates||[]);
+  if(!remates.length){scroll.innerHTML='<div class="item"><span>Sin fechas de remates</span></div>';flechas();return}
+  scroll.innerHTML=remates.map(r=>`<div class="item"><span class="fecha">${fecha(r)}</span><span class="lugar">${r.localidad||'Sin localidad'}</span><span class="cons">${r.consignataria||'Sin consignataria'}</span></div>`).join('');
+  requestAnimationFrame(flechas);
+ }catch(e){scroll.innerHTML='<div class="item"><span>No se pudieron cargar los remates</span></div>';flechas()}
+}
+scroll.addEventListener('scroll',flechas);window.addEventListener('resize',flechas);cargar();setInterval(cargar,300000);
 </script>
 </body>
 </html>
