@@ -13,7 +13,7 @@
     h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
     header p { margin:.45rem 0 0; color:#d4e5de; }
 
-    /* MARQUESINA: panel fijo + carrusel táctil */
+    /* MARQUESINA: panel fijo negro + carrusel táctil */
     .marquesina {
       position:relative;
       display:flex;
@@ -29,8 +29,7 @@
       z-index:3;
       flex:0 0 clamp(145px,18vw,205px);
       display:flex;
-      flex-direction:column;
-      justify-content:center;
+      align-items:center;
       padding:10px 16px;
       background:#111;
       border-right:1px solid #343434;
@@ -40,14 +39,7 @@
       font-size:clamp(1rem,2.1vw,1.28rem);
       line-height:1.05;
       letter-spacing:.01em;
-    }
-    .marquesina__fija span {
-      margin-top:5px;
-      font-size:.72rem;
-      font-weight:650;
-      color:#bdbdbd;
-      text-transform:uppercase;
-      letter-spacing:.07em;
+      color:#fff;
     }
     .marquesina__zona {
       position:relative;
@@ -147,7 +139,6 @@
       .marquesina { min-height:72px; }
       .marquesina__fija { flex-basis:138px; padding:9px 12px; }
       .marquesina__fija strong { font-size:1rem; }
-      .marquesina__fija span { font-size:.64rem; }
       .marquesina__scroll { padding-left:40px; padding-right:40px; }
       .remate-item { min-width:195px; padding:8px 17px; }
       .marquesina__flecha { width:30px; height:44px; }
@@ -163,7 +154,6 @@
   <section class="marquesina" aria-label="Próximos remates">
     <div class="marquesina__fija">
       <strong>Remates en<br>Entre Ríos</strong>
-      <span>Próximas fechas</span>
     </div>
     <div class="marquesina__zona">
       <button class="marquesina__flecha marquesina__flecha--izq" id="flechaIzq" aria-label="Ver remates anteriores"></button>
