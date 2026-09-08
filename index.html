@@ -7,11 +7,11 @@
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;width:100%;height:40px;overflow:hidden}
-body{font-family:Georgia,"Times New Roman",serif;background:#111}
+body{font-family:Arial,sans-serif;background:#111}
 .marquesina{position:relative;width:100%;height:40px;overflow:hidden;white-space:nowrap;background:#111;color:#fff}
-.fija{position:absolute;z-index:10;left:0;top:0;width:150px;height:40px;display:flex;align-items:center;justify-content:center;padding:0 9px;background:#4b141e;border-right:1px solid rgba(255,255,255,.4);box-shadow:7px 0 12px rgba(0,0,0,.34)}
-.fija strong{display:flex;flex-direction:column;justify-content:center;line-height:1;font-family:Arial,sans-serif;font-size:14px;letter-spacing:.1px;font-weight:700;color:#fff;text-align:center}
-.zona{position:absolute;left:150px;right:0;top:0;height:40px;overflow:hidden;background:#6b1f2b}
+.fija{position:absolute;z-index:10;left:0;top:0;width:100px;height:40px;display:flex;align-items:center;justify-content:flex-start;padding:0 8px;background:#4b141e;border-right:1px solid rgba(255,255,255,.4);box-shadow:7px 0 12px rgba(0,0,0,.34)}
+.fija strong{display:flex;flex-direction:column;justify-content:center;line-height:1;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.1px;font-weight:700;color:#fff;text-align:left}
+.zona{position:absolute;left:100px;right:0;top:0;height:40px;overflow:hidden;background:#6b1f2b}
 .scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:38px;cursor:grab;user-select:none;-webkit-user-select:none}
 .scroll.grabbing{cursor:grabbing}
 .scroll::-webkit-scrollbar{display:none}
@@ -22,7 +22,7 @@ body{font-family:Georgia,"Times New Roman",serif;background:#111}
 .flecha.der{right:0;background:linear-gradient(to left,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
 .flecha span{display:block;width:10px;height:10px;border-top:2px solid #fff;border-right:2px solid #fff}
 .izq span{transform:rotate(-135deg)}.der span{transform:rotate(45deg)}
-@media(max-width:600px){.fija{width:126px;padding:0 8px}.fija strong{font-size:12px}.zona{left:126px}.scroll{padding-left:28px}.item{padding:0 10px;font-size:11px;gap:5px}.item .fecha{font-size:12px}.item .cons{font-size:9px}.flecha{width:34px}}
+@media(max-width:600px){.fija{width:88px;padding:0 6px}.fija strong{font-size:11px}.zona{left:88px}.scroll{padding-left:28px}.item{padding:0 10px;font-size:11px;gap:5px}.item .fecha{font-size:12px}.item .cons{font-size:9px}.flecha{width:34px}}
 </style>
 </head>
 <body>
@@ -52,24 +52,9 @@ let arrastrando=false,inicioX=0,inicioScroll=0,pausarHasta=Date.now()+1200,autoD
 scroll.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;arrastrando=true;inicioX=e.clientX;inicioScroll=scroll.scrollLeft;pausarHasta=Date.now()+2500;scroll.classList.add('grabbing');e.preventDefault()});
 window.addEventListener('pointermove',e=>{if(!arrastrando)return;scroll.scrollLeft=inicioScroll-(e.clientX-inicioX);e.preventDefault()});
 window.addEventListener('pointerup',()=>{arrastrando=false;scroll.classList.remove('grabbing');pausarHasta=Date.now()+1200});
-function desplazamientoAutomatico(){
- if(arrastrando||Date.now()<pausarHasta)return;
- const max=scroll.scrollWidth-scroll.clientWidth;if(max<=2)return;
- let next=scroll.scrollLeft+0.35;
- if(next>=max){next=max;autoDireccion=-1}
- if(next<=0){next=0;autoDireccion=1}
- scroll.scrollLeft+=0.35*autoDireccion;
-}
+function desplazamientoAutomatico(){if(arrastrando||Date.now()<pausarHasta)return;const max=scroll.scrollWidth-scroll.clientWidth;if(max<=2)return;let next=scroll.scrollLeft+0.35;if(next>=max){next=max;autoDireccion=-1}if(next<=0){next=0;autoDireccion=1}scroll.scrollLeft+=0.35*autoDireccion}
 setInterval(desplazamientoAutomatico,30);
-async function cargar(){
- try{
-  const r=await fetch(JSON_URL+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);
-  const datos=await r.json(),remates=ordenar(datos.remates||[]);
-  if(!remates.length){scroll.innerHTML='<div class="item"><span>Sin fechas de remates</span></div>';flechas();return}
-  scroll.innerHTML=remates.map(r=>`<div class="item"><span class="fecha">${fecha(r)}</span><span class="lugar">${lugar(r)}</span><span class="cons">${consignataria(r)}</span></div>`).join('');
-  requestAnimationFrame(flechas);
- }catch(e){scroll.innerHTML='<div class="item"><span>No se pudieron cargar los remates</span></div>';flechas()}
-}
+async function cargar(){try{const r=await fetch(JSON_URL+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const datos=await r.json(),remates=ordenar(datos.remates||[]);if(!remates.length){scroll.innerHTML='<div class="item"><span>Sin fechas de remates</span></div>';flechas();return}scroll.innerHTML=remates.map(r=>`<div class="item"><span class="fecha">${fecha(r)}</span><span class="lugar">${lugar(r)}</span><span class="cons">${consignataria(r)}</span></div>`).join('');requestAnimationFrame(flechas)}catch(e){scroll.innerHTML='<div class="item"><span>No se pudieron cargar los remates</span></div>';flechas()}}
 scroll.addEventListener('scroll',flechas);window.addEventListener('resize',flechas);cargar();setInterval(cargar,300000);
 </script>
 </body>
