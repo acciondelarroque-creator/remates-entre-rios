@@ -1,274 +1,67 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Próximos remates ganaderos de Entre Ríos.">
-  <title>Remates de Entre Ríos</title>
-  <style>
-    :root { color-scheme: dark; --fondo:#0d1c18; --panel:#152a24; --borde:#2d4a40; --texto:#f4f7f5; --suave:#b6c9c1; --acento:#f4b942; --bordo:#6b1f2b; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--fondo); color:var(--texto); }
-    header { padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2)); background:linear-gradient(120deg,#123c2e,#1f5943); }
-    h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
-    header p { margin:.45rem 0 0; color:#d4e5de; }
-
-    /* MARQUESINA: panel fijo negro + carrusel bordo táctil */
-    .marquesina {
-      position:relative;
-      display:flex;
-      align-items:stretch;
-      width:100%;
-      background:var(--bordo);
-      color:#fff;
-      overflow:hidden;
-      min-height:76px;
-    }
-    .marquesina__fija {
-      position:relative;
-      z-index:3;
-      flex:0 0 clamp(145px,18vw,205px);
-      display:flex;
-      align-items:center;
-      padding:10px 16px;
-      background:#111;
-      border-right:1px solid #343434;
-      box-shadow:8px 0 18px rgba(0,0,0,.28);
-    }
-    .marquesina__fija strong {
-      font-size:clamp(1rem,2.1vw,1.28rem);
-      line-height:1.05;
-      letter-spacing:.01em;
-      color:#fff;
-    }
-    .marquesina__zona {
-      position:relative;
-      flex:1;
-      min-width:0;
-      overflow:hidden;
-      background:var(--bordo);
-    }
-    .marquesina__scroll {
-      display:flex;
-      align-items:stretch;
-      width:max-content;
-      height:100%;
-      overflow-x:auto;
-      overscroll-behavior-x:contain;
-      scroll-behavior:smooth;
-      scrollbar-width:none;
-      -webkit-overflow-scrolling:touch;
-      touch-action:pan-x;
-      padding:0 48px;
-      background:var(--bordo);
-    }
-    .marquesina__scroll::-webkit-scrollbar { display:none; }
-    .remate-item {
-      flex:0 0 auto;
-      min-width:210px;
-      max-width:285px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      padding:9px 22px;
-      border-right:1px solid rgba(255,255,255,.18);
-      background:var(--bordo);
-    }
-    .remate-item .fecha {
-      color:#fff;
-      font-size:1.02rem;
-      line-height:1.05;
-      font-weight:850;
-    }
-    .remate-item .lugar {
-      margin-top:4px;
-      color:#fff;
-      font-size:.92rem;
-      font-weight:800;
-      text-transform:uppercase;
-    }
-    .remate-item .consignataria {
-      margin-top:2px;
-      color:#f0dfe2;
-      font-size:.76rem;
-      white-space:nowrap;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-    .marquesina__flecha {
-      position:absolute;
-      z-index:4;
-      top:50%;
-      transform:translateY(-50%);
-      width:34px;
-      height:48px;
-      border:0;
-      border-radius:7px;
-      background:rgba(17,17,17,.92);
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 1px 8px rgba(0,0,0,.35);
-    }
-    .marquesina__flecha::before {
-      content:"";
-      width:10px;
-      height:10px;
-      border-top:3px solid #fff;
-      border-right:3px solid #fff;
-    }
-    .marquesina__flecha--izq { left:7px; }
-    .marquesina__flecha--izq::before { transform:rotate(-135deg); margin-left:5px; }
-    .marquesina__flecha--der { right:7px; }
-    .marquesina__flecha--der::before { transform:rotate(45deg); margin-right:5px; }
-    .marquesina__flecha:hover { background:#000; }
-    .marquesina__flecha:focus-visible { outline:2px solid #fff; outline-offset:2px; }
-
-    main { width:min(1100px,calc(100% - 2rem)); margin:2rem auto 3rem; }
-    .estado { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; color:var(--suave); margin-bottom:1.25rem; }
-    .punto { width:.65rem; height:.65rem; border-radius:50%; background:#44d384; display:inline-block; }
-    .lista { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
-    article { border:1px solid var(--borde); border-radius:.85rem; padding:1.1rem; background:var(--panel); box-shadow:0 8px 24px #0002; }
-    .fecha { color:var(--acento); font-weight:800; font-size:1.1rem; }
-    h2 { font-size:1rem; margin:.7rem 0 .35rem; }
-    p { margin:.25rem 0; }
-    .tipo { display:inline-block; margin-top:.8rem; padding:.25rem .55rem; border-radius:999px; background:#24483b; color:#dff1e9; font-size:.78rem; text-transform:capitalize; }
-    .vacio,.error { padding:1.25rem; border:1px dashed var(--borde); border-radius:.75rem; color:var(--suave); }
-    footer { text-align:center; color:var(--suave); padding:1rem; font-size:.85rem; }
-
-    @media (max-width:600px) {
-      .marquesina { min-height:72px; }
-      .marquesina__fija { flex-basis:138px; padding:9px 12px; }
-      .marquesina__fija strong { font-size:1rem; }
-      .marquesina__scroll { padding-left:40px; padding-right:40px; }
-      .remate-item { min-width:195px; padding:8px 17px; }
-      .marquesina__flecha { width:30px; height:44px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acción Rural - Remates</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;overflow:hidden;background:#fff}
+body{font-family:Georgia,"Times New Roman",serif}
+.marquesina{position:relative;width:100%;overflow:hidden;white-space:nowrap;background:#111;color:#eee;height:40px;line-height:40px}
+.marquesina__fija{position:absolute;z-index:5;left:0;top:0;height:40px;width:150px;display:flex;align-items:center;padding:0 8px;background:#111;border-right:1px solid rgba(255,255,255,.35);box-shadow:7px 0 12px rgba(0,0,0,.28);line-height:normal}
+.marquesina__fija strong{width:100%;display:flex;flex-direction:column;justify-content:center;line-height:1;font-size:15px;font-weight:700;letter-spacing:.2px;color:#fff}
+.marquesina__zona{position:absolute;left:150px;right:0;top:0;height:40px;overflow:hidden;touch-action:pan-x;background:#6b1f2b}
+.marquesina__scroll{position:absolute;left:0;top:0;width:100%;min-width:0;max-width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;cursor:grab;background:#6b1f2b;padding-left:22px}
+.marquesina__scroll::-webkit-scrollbar{display:none}
+.marquesina__scroll.dragging{cursor:grabbing}
+.remate-item{display:inline-flex;align-items:center;gap:7px;padding:0 20px;height:40px;border-right:1px solid rgba(255,255,255,.28);font-family:Georgia,"Times New Roman",serif;font-size:14px;font-weight:600;flex:0 0 auto;color:#fff}
+.remate-item .fecha{color:#fff;font-weight:800}
+.remate-item .lugar{color:#fff;font-weight:700;text-transform:uppercase}
+.remate-item .consignataria{color:#f0dfe2;font-size:11px}
+.marquesina__flecha{position:absolute;z-index:6;top:0;width:38px;height:40px;display:flex;align-items:center;justify-content:center;pointer-events:none;background:linear-gradient(to right,rgba(107,31,43,.96),rgba(107,31,43,0));color:#fff;opacity:1;transition:opacity .25s}
+.marquesina__flecha--izq{left:0;background:linear-gradient(to right,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
+.marquesina__flecha--der{right:0;background:linear-gradient(to left,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
+.marquesina__flecha span{display:block;width:10px;height:10px;border-top:2px solid #fff;border-right:2px solid #fff;line-height:0;font-size:0;flex:0 0 10px}
+.marquesina__flecha--izq span{transform:rotate(-135deg);animation:slideHintLeft 1.5s ease-in-out infinite}
+.marquesina__flecha--der span{transform:rotate(45deg);animation:slideHint 1.5s ease-in-out infinite}
+@keyframes slideHint{0%,100%{margin-left:0;opacity:.55}50%{margin-left:6px;opacity:1}}
+@keyframes slideHintLeft{0%,100%{margin-left:0;opacity:.55}50%{margin-left:-6px;opacity:1}}
+.marquesina__flecha.hidden{opacity:0}
+main{width:min(1100px,calc(100% - 2rem));margin:2rem auto 3rem;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}
+header{padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2));background:linear-gradient(120deg,#123c2e,#1f5943);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}
+header h1{margin:0;font-size:clamp(1.6rem,4vw,2.7rem);color:#f4f7f5} header p{margin:.45rem 0 0;color:#d4e5de}
+.estado{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;color:#666;margin-bottom:1.25rem}.punto{width:.65rem;height:.65rem;border-radius:50%;background:#44d384;display:inline-block}
+.lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}article{border:1px solid #2d4a40;border-radius:.85rem;padding:1.1rem;background:#152a24;box-shadow:0 8px 24px #0002;color:#f4f7f5}.fecha{color:#f4b942;font-weight:800;font-size:1.1rem}article h2{font-size:1rem;margin:.7rem 0 .35rem}article p{margin:.25rem 0}.tipo{display:inline-block;margin-top:.8rem;padding:.25rem .55rem;border-radius:999px;background:#24483b;color:#dff1e9;font-size:.78rem;text-transform:capitalize}.vacio,.error{padding:1.25rem;border:1px dashed #2d4a40;border-radius:.75rem;color:#666}footer{text-align:center;color:#666;padding:1rem;font-size:.85rem;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;white-space:normal}
+@media(max-width:600px){.marquesina__fija{width:126px;height:40px;padding:0 8px}.marquesina__zona{left:126px;height:40px}.marquesina__scroll{height:40px;padding-left:22px}.remate-item{height:40px;padding:0 14px;font-size:12px;gap:6px}.remate-item .consignataria{font-size:10px}.marquesina__flecha{height:40px;width:38px}.marquesina__fija strong{font-size:12px}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Remates de Entre Ríos</h1>
-    <p>Calendario actualizado automáticamente de próximos remates ganaderos.</p>
-  </header>
-
-  <section class="marquesina" aria-label="Próximos remates">
-    <div class="marquesina__fija">
-      <strong>Remates en<br>Entre Ríos</strong>
-    </div>
-    <div class="marquesina__zona">
-      <button class="marquesina__flecha marquesina__flecha--izq" id="flechaIzq" aria-label="Ver remates anteriores"></button>
-      <div id="marquesina" class="marquesina__scroll" tabindex="0" aria-label="Deslizá para ver las próximas fechas">
-        <div class="remate-item"><div class="fecha">Cargando…</div><div class="lugar">Próximos remates</div></div>
-      </div>
-      <button class="marquesina__flecha marquesina__flecha--der" id="flechaDer" aria-label="Ver más remates"></button>
-    </div>
-  </section>
-
-  <main>
-    <div class="estado">
-      <span class="punto" aria-hidden="true"></span>
-      <span id="estado">Cargando información…</span>
-    </div>
-    <section id="lista" class="lista" aria-live="polite"></section>
-  </main>
-
-  <footer>Fuente: Consignatarias.com.ar · Actualización automática cada 5 minutos</footer>
-
-  <script>
-    const ARCHIVO = "remates.json";
-    const INTERVALO = 5 * 60 * 1000;
-    const MESES_CORTOS = ["ene.", "feb.", "mar.", "abr.", "may.", "jun.", "jul.", "ago.", "sep.", "oct.", "nov.", "dic."];
-
-    const texto = (valor) => valor || "Sin información";
-
-    const fechaLegible = (fecha, hora) => {
-      const valor = new Date(fecha + "T" + (hora || "00:00"));
-      return Number.isNaN(valor) ? [fecha, hora].filter(Boolean).join(" · ") : new Intl.DateTimeFormat("es-AR", {
-        weekday:"short", day:"2-digit", month:"long", hour:hora ? "2-digit" : undefined, minute:hora ? "2-digit" : undefined
-      }).format(valor).replace(",", " ·");
-    };
-
-    const fechaMarquesina = (fecha, hora) => {
-      const valor = new Date(fecha + "T" + (hora || "00:00"));
-      if (Number.isNaN(valor)) return [fecha, hora].filter(Boolean).join(" · ");
-      return `${String(valor.getDate()).padStart(2,"0")} ${MESES_CORTOS[valor.getMonth()].toUpperCase()}${hora ? ` · ${hora}` : ""}`;
-    };
-
-    function ordenar(remates) {
-      return [...remates].sort((a, b) =>
-        (a.fecha || "").localeCompare(b.fecha || "") ||
-        (a.hora || "").localeCompare(b.hora || "") ||
-        (a.localidad || "").localeCompare(b.localidad || "", "es") ||
-        (a.consignataria || "").localeCompare(b.consignataria || "", "es")
-      );
-    }
-
-    function actualizarFlechas() {
-      const zona = document.querySelector("#marquesina");
-      const izq = document.querySelector("#flechaIzq");
-      const der = document.querySelector("#flechaDer");
-      const puedeMover = zona.scrollWidth > zona.clientWidth + 2;
-      izq.style.display = puedeMover ? "flex" : "none";
-      der.style.display = puedeMover ? "flex" : "none";
-    }
-
-    function mover(direccion) {
-      const zona = document.querySelector("#marquesina");
-      zona.scrollBy({ left: direccion * Math.max(260, zona.clientWidth * .72), behavior:"smooth" });
-    }
-
-    document.querySelector("#flechaIzq").addEventListener("click", () => mover(-1));
-    document.querySelector("#flechaDer").addEventListener("click", () => mover(1));
-
-    function mostrar(remates, actualizado) {
-      const lista = document.querySelector("#lista");
-      const marquesina = document.querySelector("#marquesina");
-      const estado = document.querySelector("#estado");
-
-      if (!remates.length) {
-        lista.innerHTML = '<p class="vacio">No hay próximos remates informados por el momento.</p>';
-        marquesina.innerHTML = '<div class="remate-item"><div class="fecha">Sin fechas</div><div class="lugar">No hay próximos remates</div></div>';
-      } else {
-        lista.innerHTML = remates.map((r) => `
-          <article>
-            <div class="fecha">${fechaLegible(r.fecha, r.hora)}</div>
-            <h2>${texto(r.localidad)}</h2>
-            <p>${texto(r.consignataria)}</p>
-            ${r.titulo ? `<p>${r.titulo}</p>` : ""}
-            <span class="tipo">${texto(r.tipo)}</span>
-          </article>`
-        ).join("");
-
-        marquesina.innerHTML = remates.map((r) => `
-          <div class="remate-item">
-            <div class="fecha">${fechaMarquesina(r.fecha, r.hora)}</div>
-            <div class="lugar">${texto(r.localidad)}</div>
-            <div class="consignataria">${texto(r.consignataria)}</div>
-          </div>`).join("");
-      }
-
-      const momento = actualizado ? new Date(actualizado) : null;
-      estado.textContent = `${remates.length} remates próximos${momento && !Number.isNaN(momento) ? " · datos actualizados " + momento.toLocaleString("es-AR") : ""}`;
-      requestAnimationFrame(actualizarFlechas);
-    }
-
-    async function actualizar() {
-      try {
-        const respuesta = await fetch(`${ARCHIVO}?v=${Date.now()}`, { cache:"no-store" });
-        if (!respuesta.ok) throw new Error("No se pudo leer el calendario.");
-        const datos = await respuesta.json();
-        mostrar(ordenar(datos.remates || []), datos.actualizado);
-      } catch (error) {
-        document.querySelector("#estado").textContent = "No fue posible actualizar el calendario.";
-        document.querySelector("#lista").innerHTML = '<p class="error">Reintentaremos la conexión automáticamente.</p>';
-      }
-    }
-
-    window.addEventListener("resize", actualizarFlechas);
-    actualizar();
-    setInterval(actualizar, INTERVALO);
-  </script>
+<header><h1>Remates de Entre Ríos</h1><p>Calendario actualizado automáticamente de próximos remates ganaderos.</p></header>
+<section class="marquesina" aria-label="Próximos remates">
+<div class="marquesina__fija"><strong>Remates en<br>Entre Ríos</strong></div>
+<div class="marquesina__zona">
+<button class="marquesina__flecha marquesina__flecha--izq" id="flechaIzq" aria-label="Ver remates anteriores"><span></span></button>
+<div id="marquesina" class="marquesina__scroll" tabindex="0" aria-label="Deslizá para ver las próximas fechas"><div class="remate-item"><span>Cargando…</span></div></div>
+<button class="marquesina__flecha marquesina__flecha--der" id="flechaDer" aria-label="Ver más remates"><span></span></button>
+</div>
+</section>
+<main><div class="estado"><span class="punto" aria-hidden="true"></span><span id="estado">Cargando información…</span></div><section id="lista" class="lista" aria-live="polite"></section></main>
+<footer>Fuente: calendario de remates de Entre Ríos · Actualización automática</footer>
+<script>
+const ARCHIVO="remates.json";
+const INTERVALO=5*60*1000;
+const MESES_CORTOS=["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic."];
+const texto=v=>v||"Sin información";
+const fechaLegible=(fecha,hora)=>{const v=new Date(fecha+"T"+(hora||"00:00"));return Number.isNaN(v)?[fecha,hora].filter(Boolean).join(" · "):new Intl.DateTimeFormat("es-AR",{weekday:"short",day:"2-digit",month:"long",hour:hora?"2-digit":undefined,minute:hora?"2-digit":undefined}).format(v).replace(","," ·")};
+const fechaMarquesina=(fecha,hora)=>{const v=new Date(fecha+"T"+(hora||"00:00"));if(Number.isNaN(v))return[fecha,hora].filter(Boolean).join(" · ");return`${String(v.getDate()).padStart(2,"0")} ${MESES_CORTOS[v.getMonth()].toUpperCase()}${hora?` · ${hora}`:""}`};
+function ordenar(remates){return[...remates].sort((a,b)=>(a.fecha||"").localeCompare(b.fecha||"")||(a.hora||"").localeCompare(b.hora||"")||(a.localidad||"").localeCompare(b.localidad||","es")||(a.consignataria||"").localeCompare(b.consignataria||","es"))}
+function actualizarFlechas(){const zona=document.querySelector("#marquesina"),izq=document.querySelector("#flechaIzq"),der=document.querySelector("#flechaDer"),puede=zona.scrollWidth>zona.clientWidth+2;izq.style.display=puede?"flex":"none";der.style.display=puede?"flex":"none"}
+function mover(direccion){const zona=document.querySelector("#marquesina");zona.scrollBy({left:direccion*Math.max(260,zona.clientWidth*.72),behavior:"smooth"})}
+document.querySelector("#flechaIzq").addEventListener("click",()=>mover(-1));document.querySelector("#flechaDer").addEventListener("click",()=>mover(1));
+function mostrar(remates,actualizado){const lista=document.querySelector("#lista"),marquesina=document.querySelector("#marquesina"),estado=document.querySelector("#estado");if(!remates.length){lista.innerHTML='<p class="vacio">No hay próximos remates informados por el momento.</p>';marquesina.innerHTML='<div class="remate-item"><span>Sin fechas</span></div>'}else{lista.innerHTML=remates.map(r=>`<article><div class="fecha">${fechaLegible(r.fecha,r.hora)}</div><h2>${texto(r.localidad)}</h2><p>${texto(r.consignataria)}</p>${r.titulo?`<p>${r.titulo}</p>`:""}<span class="tipo">${texto(r.tipo)}</span></article>`).join("");marquesina.innerHTML=remates.map(r=>`<div class="remate-item"><span class="fecha">${fechaMarquesina(r.fecha,r.hora)}</span><span class="lugar">${texto(r.localidad)}</span><span class="consignataria">${texto(r.consignataria)}</span></div>`).join("")}const momento=actualizado?new Date(actualizado):null;estado.textContent=`${remates.length} remates próximos${momento&&!Number.isNaN(momento)?" · datos actualizados "+momento.toLocaleString("es-AR"):""}`;requestAnimationFrame(actualizarFlechas)}
+async function actualizar(){try{const respuesta=await fetch(`${ARCHIVO}?v=${Date.now()}`,{cache:"no-store"});if(!respuesta.ok)throw new Error("No se pudo leer el calendario.");const datos=await respuesta.json();mostrar(ordenar(datos.remates||[]),datos.actualizado)}catch(error){document.querySelector("#estado").textContent="No fue posible actualizar el calendario.";document.querySelector("#lista").innerHTML='<p class="error">Reintentaremos la conexión automáticamente.</p>'}}
+window.addEventListener("resize",actualizarFlechas);actualizar();setInterval(actualizar,INTERVALO);
+</script>
 </body>
 </html>
