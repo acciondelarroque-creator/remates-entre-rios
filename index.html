@@ -12,17 +12,19 @@ body{font-family:Arial,sans-serif;background:#111}
 .fija{position:absolute;z-index:10;left:0;top:0;width:100px;height:40px;display:flex;align-items:center;justify-content:flex-start;padding:0 8px;background:#4b141e;border-right:1px solid rgba(255,255,255,.4);box-shadow:7px 0 12px rgba(0,0,0,.34)}
 .fija strong{display:flex;flex-direction:column;justify-content:center;line-height:1;font-family:Arial,sans-serif;font-size:13px;letter-spacing:.1px;font-weight:700;color:#fff;text-align:left}
 .zona{position:absolute;left:100px;right:0;top:0;height:40px;overflow:hidden;background:#6b1f2b}
-.scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:38px;cursor:grab;user-select:none;-webkit-user-select:none}
+.scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:28px;cursor:grab;user-select:none;-webkit-user-select:none}
 .scroll.grabbing{cursor:grabbing}
 .scroll::-webkit-scrollbar{display:none}
-.item{display:inline-flex;align-items:center;gap:6px;height:40px;flex:0 0 auto;padding:0 14px;border-right:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:600}
-.item .fecha{font-weight:800;font-size:14px;font-variant-numeric:tabular-nums;letter-spacing:.15px;color:#fff}.item .lugar{font-weight:700;text-transform:uppercase;color:#fff}.item .cons{font-size:10px;color:#f0dfe2}
-.flecha{position:absolute;z-index:20;top:0;width:38px;height:40px;display:none;align-items:center;justify-content:center;color:#fff;pointer-events:auto;cursor:pointer}
+.item{display:inline-flex;align-items:center;gap:6px;height:40px;flex:0 0 auto;padding:0 14px;border-right:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:400}
+.item .fecha{font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:.15px;color:#fff}
+.item .lugar{font-weight:700;text-transform:uppercase;color:#fff}
+.item .cons{font-size:13px;font-weight:400;color:#f0dfe2}
+.flecha{position:absolute;z-index:20;top:0;width:34px;height:40px;display:none;align-items:center;justify-content:center;color:#fff;pointer-events:auto;cursor:pointer}
 .flecha.izq{left:0;background:linear-gradient(to right,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
 .flecha.der{right:0;background:linear-gradient(to left,#6b1f2b,rgba(107,31,43,.92),rgba(107,31,43,0))}
 .flecha span{display:block;width:10px;height:10px;border-top:2px solid #fff;border-right:2px solid #fff}
 .izq span{transform:rotate(-135deg)}.der span{transform:rotate(45deg)}
-@media(max-width:600px){.fija{width:88px;padding:0 6px}.fija strong{font-size:11px}.zona{left:88px}.scroll{padding-left:28px}.item{padding:0 10px;font-size:11px;gap:5px}.item .fecha{font-size:12px}.item .cons{font-size:9px}.flecha{width:34px}}
+@media(max-width:600px){.fija{width:88px;padding:0 6px}.fija strong{font-size:11px}.zona{left:88px}.scroll{padding-left:20px}.item{padding:0 10px;font-size:11px;gap:5px}.item .fecha{font-size:11px}.item .cons{font-size:11px}.flecha{width:30px}}
 </style>
 </head>
 <body>
@@ -42,7 +44,7 @@ const MESES=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','
 const scroll=document.getElementById('scroll'),izq=document.getElementById('izq'),der=document.getElementById('der');
 function ordenar(a){return [...a].sort((x,y)=>(x.fecha||'').localeCompare(y.fecha||'')||(x.hora||'').localeCompare(y.hora||'')||(x.localidad||'').localeCompare(y.localidad||'','es')||(x.consignataria||'').localeCompare(y.consignataria||'','es'))}
 function fecha(r){const d=new Date((r.fecha||'')+'T00:00');if(Number.isNaN(d.getTime()))return r.fecha||'';return `${String(d.getDate()).padStart(2,'0')} ${MESES[d.getMonth()]}`}
-function abreviarTexto(s){return (s||'').trim().replace(/\bGENERAL\b/gi,'GRAL.').replace(/\bENTRE R[IÍ]OS\b/gi,'ER').replace(/\bCONSIGNATARIA\b/gi,'CONSIG.').replace(/\bCOOPERATIVA\b/gi,'COOP.').replace(/\bSOCIEDAD RURAL\b/gi,'SOC. RURAL').replace(/\s{2,}/g,' ').trim()}
+function abreviarTexto(s){return (s||'').trim().replace(/\bGENERAL\b/gi,'GRAL.').replace(/\bCONSIGNATARIA\b/gi,'CONSIG.').replace(/\bCOOPERATIVA\b/gi,'COOP.').replace(/\bSOCIEDAD RURAL\b/gi,'SOC. RURAL').replace(/\s{2,}/g,' ').trim()}
 function lugar(r){const l=(r.localidad||'').trim();if(/^FERIA MAR[IÍ]A DOLORES\s*[–-]\s*GENERAL RAM[IÍ]REZ$/i.test(l))return 'FMD - GRAL. RAMÍREZ';return abreviarTexto(l)||'SIN LOCALIDAD'}
 function consignataria(r){return abreviarTexto(r.consignataria)||'SIN CONSIG.'}
 function flechas(){const ok=scroll.scrollWidth>scroll.clientWidth+2;izq.style.display=ok?'flex':'none';der.style.display=ok?'flex':'none'}
@@ -52,7 +54,7 @@ let arrastrando=false,inicioX=0,inicioScroll=0,pausarHasta=Date.now()+1200,autoD
 scroll.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;arrastrando=true;inicioX=e.clientX;inicioScroll=scroll.scrollLeft;pausarHasta=Date.now()+2500;scroll.classList.add('grabbing');e.preventDefault()});
 window.addEventListener('pointermove',e=>{if(!arrastrando)return;scroll.scrollLeft=inicioScroll-(e.clientX-inicioX);e.preventDefault()});
 window.addEventListener('pointerup',()=>{arrastrando=false;scroll.classList.remove('grabbing');pausarHasta=Date.now()+1200});
-function desplazamientoAutomatico(){if(arrastrando||Date.now()<pausarHasta)return;const max=scroll.scrollWidth-scroll.clientWidth;if(max<=2)return;let next=scroll.scrollLeft+0.35;if(next>=max){next=max;autoDireccion=-1}if(next<=0){next=0;autoDireccion=1}scroll.scrollLeft+=0.35*autoDireccion}
+function desplazamientoAutomatico(){if(arrastrando||Date.now()<pausarHasta)return;const max=scroll.scrollWidth-scroll.clientWidth;if(max<=2)return;let next=scroll.scrollLeft+0.6*autoDireccion;if(next>=max){next=max;autoDireccion=-1}if(next<=0){next=0;autoDireccion=1}scroll.scrollLeft=next}
 setInterval(desplazamientoAutomatico,30);
 async function cargar(){try{const r=await fetch(JSON_URL+'?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const datos=await r.json(),remates=ordenar(datos.remates||[]);if(!remates.length){scroll.innerHTML='<div class="item"><span>Sin fechas de remates</span></div>';flechas();return}scroll.innerHTML=remates.map(r=>`<div class="item"><span class="fecha">${fecha(r)}</span><span class="lugar">${lugar(r)}</span><span class="cons">${consignataria(r)}</span></div>`).join('');requestAnimationFrame(flechas)}catch(e){scroll.innerHTML='<div class="item"><span>No se pudieron cargar los remates</span></div>';flechas()}}
 scroll.addEventListener('scroll',flechas);window.addEventListener('resize',flechas);cargar();setInterval(cargar,300000);
