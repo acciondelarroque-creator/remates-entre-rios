@@ -12,7 +12,8 @@ body{font-family:Georgia,"Times New Roman",serif;background:#111}
 .fija{position:absolute;z-index:10;left:0;top:0;width:150px;height:40px;display:flex;align-items:center;padding:0 9px;background:#111;border-right:1px solid rgba(255,255,255,.35);box-shadow:7px 0 12px rgba(0,0,0,.28)}
 .fija strong{display:flex;flex-direction:column;justify-content:center;line-height:1;font-size:15px;letter-spacing:.15px;color:#fff}
 .zona{position:absolute;left:150px;right:0;top:0;height:40px;overflow:hidden;background:#6b1f2b}
-.scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:22px;cursor:grab}
+.scroll{position:absolute;left:0;top:0;width:100%;height:40px;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;padding-left:22px;cursor:grab;user-select:none;-webkit-user-select:none}
+.scroll.grabbing{cursor:grabbing}
 .scroll::-webkit-scrollbar{display:none}
 .item{display:inline-flex;align-items:center;gap:7px;height:40px;flex:0 0 auto;padding:0 20px;border-right:1px solid rgba(255,255,255,.28);color:#fff;font-size:14px;font-weight:600}
 .item .fecha{font-weight:800;color:#fff}.item .lugar{font-weight:700;text-transform:uppercase;color:#fff}.item .cons{font-size:11px;color:#f0dfe2}
@@ -44,6 +45,17 @@ function fecha(r){const d=new Date((r.fecha||'')+'T'+(r.hora||'00:00'));if(Numbe
 function flechas(){const ok=scroll.scrollWidth>scroll.clientWidth+2;izq.style.display=ok?'flex':'none';der.style.display=ok?'flex':'none'}
 function mover(n){scroll.scrollBy({left:n*Math.max(260,scroll.clientWidth*.72),behavior:'smooth'})}
 der.addEventListener('click',()=>mover(1));izq.addEventListener('click',()=>mover(-1));
+let arrastrando=false, inicioX=0, inicioScroll=0;
+scroll.addEventListener('pointerdown',e=>{
+  if(e.pointerType!=='mouse')return;
+  arrastrando=true;inicioX=e.clientX;inicioScroll=scroll.scrollLeft;scroll.classList.add('grabbing');e.preventDefault();
+});
+window.addEventListener('pointermove',e=>{
+  if(!arrastrando)return;
+  scroll.scrollLeft=inicioScroll-(e.clientX-inicioX);
+  e.preventDefault();
+});
+window.addEventListener('pointerup',()=>{arrastrando=false;scroll.classList.remove('grabbing')});
 async function cargar(){
  try{
   const r=await fetch(JSON_URL+'?v='+Date.now(),{cache:'no-store'});
