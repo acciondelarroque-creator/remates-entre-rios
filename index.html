@@ -6,20 +6,20 @@
   <meta name="description" content="Próximos remates ganaderos de Entre Ríos.">
   <title>Remates de Entre Ríos</title>
   <style>
-    :root { color-scheme: dark; --fondo:#0d1c18; --panel:#152a24; --borde:#2d4a40; --texto:#f4f7f5; --suave:#b6c9c1; --acento:#f4b942; }
+    :root { color-scheme: dark; --fondo:#0d1c18; --panel:#152a24; --borde:#2d4a40; --texto:#f4f7f5; --suave:#b6c9c1; --acento:#f4b942; --bordo:#6b1f2b; }
     * { box-sizing: border-box; }
     body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--fondo); color:var(--texto); }
     header { padding:clamp(1.25rem,4vw,3rem) max(1rem,calc((100vw - 1100px)/2)); background:linear-gradient(120deg,#123c2e,#1f5943); }
     h1 { margin:0; font-size:clamp(1.6rem,4vw,2.7rem); }
     header p { margin:.45rem 0 0; color:#d4e5de; }
 
-    /* MARQUESINA: panel fijo negro + carrusel táctil */
+    /* MARQUESINA: panel fijo negro + carrusel bordo táctil */
     .marquesina {
       position:relative;
       display:flex;
       align-items:stretch;
       width:100%;
-      background:#111;
+      background:var(--bordo);
       color:#fff;
       overflow:hidden;
       min-height:76px;
@@ -46,6 +46,7 @@
       flex:1;
       min-width:0;
       overflow:hidden;
+      background:var(--bordo);
     }
     .marquesina__scroll {
       display:flex;
@@ -59,6 +60,7 @@
       -webkit-overflow-scrolling:touch;
       touch-action:pan-x;
       padding:0 48px;
+      background:var(--bordo);
     }
     .marquesina__scroll::-webkit-scrollbar { display:none; }
     .remate-item {
@@ -69,11 +71,11 @@
       flex-direction:column;
       justify-content:center;
       padding:9px 22px;
-      border-right:1px solid #383838;
-      background:#1b1b1b;
+      border-right:1px solid rgba(255,255,255,.18);
+      background:var(--bordo);
     }
     .remate-item .fecha {
-      color:var(--acento);
+      color:#fff;
       font-size:1.02rem;
       line-height:1.05;
       font-weight:850;
@@ -87,7 +89,7 @@
     }
     .remate-item .consignataria {
       margin-top:2px;
-      color:#c8c8c8;
+      color:#f0dfe2;
       font-size:.76rem;
       white-space:nowrap;
       overflow:hidden;
@@ -102,7 +104,7 @@
       height:48px;
       border:0;
       border-radius:7px;
-      background:rgba(0,0,0,.72);
+      background:rgba(17,17,17,.92);
       cursor:pointer;
       display:flex;
       align-items:center;
@@ -120,8 +122,8 @@
     .marquesina__flecha--izq::before { transform:rotate(-135deg); margin-left:5px; }
     .marquesina__flecha--der { right:7px; }
     .marquesina__flecha--der::before { transform:rotate(45deg); margin-right:5px; }
-    .marquesina__flecha:hover { background:rgba(0,0,0,.9); }
-    .marquesina__flecha:focus-visible { outline:2px solid var(--acento); outline-offset:2px; }
+    .marquesina__flecha:hover { background:#000; }
+    .marquesina__flecha:focus-visible { outline:2px solid #fff; outline-offset:2px; }
 
     main { width:min(1100px,calc(100% - 2rem)); margin:2rem auto 3rem; }
     .estado { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; color:var(--suave); margin-bottom:1.25rem; }
