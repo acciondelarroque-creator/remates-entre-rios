@@ -31,6 +31,45 @@ jobs:
       - name: Obtener remates
         run: python update.py
 
+      - name: Incorporar fuentes adicionales
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          data_path = Path("remates.json")
+          extra_path = Path("fuentes_extra.json")
+          data = json.loads(data_path.read_text(encoding="utf-8"))
+          extra = json.loads(extra_path.read_text(encoding="utf-8"))
+
+          actuales = data.get("remates", [])
+          ids = {str(x.get("id")) for x in actuales}
+          for item in extra:
+              if str(item.get("id")) not in ids:
+                  actuales.append(item)
+
+          actuales.sort(key=lambda x: (x.get("fecha", "9999-12-31"), x.get("hora") or "99:99", x.get("consignataria", ""), x.get("titulo", "")))
+          data["remates"] = actuales
+          data["cantidad"] = len(actuales)
+          data["periodo"]["desde"] = datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).strftime("%Y-%m-%d")
+          if actuales:
+              data["periodo"]["hasta"] = max(x.get("fecha", data["periodo"]["hasta"]) for x in actuales)
+              desde = datetime.fromisoformat(data["periodo"]["desde"])
+              hasta = datetime.fromisoformat(data["periodo"]["hasta"])
+              data["periodo"]["dias"] = (hasta - desde).days
+          data["fuente"] = "Consignatarias.com.ar + Etchevehere Rural + Consignataria Hasenkamp + La Ganadera + Acción Rural"
+          data["fuentes"] = [
+              "https://etchevehere-rural.com.ar/hacienda/remates",
+              "https://chsrl.com.ar/proximos-remates/",
+              "https://laganadera.com.ar/remates",
+              "https://www.consignatarias.com.ar/remates/entre-rios"
+          ]
+          data["actualizado"] = datetime.now(ZoneInfo("America/Argentina/Buenos_Aires")).isoformat()
+          data_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+          PY
+
       - name: Guardar cambios
         run: |
           git config user.name "github-actions[bot]"
