@@ -1,66 +1,14 @@
 {
-  "actualizado": "2026-09-08T20:59:53.902532-03:00",
+  "actualizado": "2026-09-09T12:42:07.206123-03:00",
   "fuente": "Consignatarias.com.ar + Etchevehere Rural + Consignataria Hasenkamp + La Ganadera + Acción Rural",
   "url_fuente": "https://www.consignatarias.com.ar/remates/entre-rios",
   "periodo": {
-    "desde": "2026-09-08",
+    "desde": "2026-09-09",
     "hasta": "2026-11-13",
-    "dias": 66
+    "dias": 65
   },
-  "cantidad": 54,
+  "cantidad": 52,
   "remates": [
-    {
-      "id": 767,
-      "fecha": "2026-09-08",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "General Ramirez, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria Maria Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://ftp.rural-server.com/remates/images/3yLasuVdEF9wWJET.jpg",
-      "url_youtube": null
-    },
-    {
-      "id": "manual-2026-09-08-maria-dolores",
-      "fecha": "2026-09-08",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Haciendas Generales",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": 777,
-      "fecha": "2026-09-08",
-      "hora": "13:30",
-      "consignataria": "COLOMBO Y MAGLIANO S.A.",
-      "localidad": "Villaguay, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "reproductores",
-      "titulo": "Gran Remate Anual LITORANGUS Cabaña Santa Juana por Canal Rural",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://remates.elrural.com/remate/6564-colombo-y-magliano-litorangus-2026",
-      "url_youtube": null
-    },
-    {
-      "id": 780,
-      "fecha": "2026-09-08",
-      "hora": "15:00",
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "La Paz, Entre Rios",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "REMATE FERIA EN SOCIEDAD RURAL LA PAZ",
-      "cabezas_estimadas": null,
-      "url_catalogo": "https://ftp.rural-server.com/remates/images/YEqDrlGsSCLDckGP.png",
-      "url_youtube": null
-    },
     {
       "id": 791,
       "fecha": "2026-09-09",
@@ -137,6 +85,19 @@
       "titulo": "Haciendas Generales",
       "cabezas_estimadas": null,
       "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": 830,
+      "fecha": "2026-09-10",
+      "hora": "15:00",
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "General Ramirez, Entre Rios",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "REMATE FERIA EN INSTALACIONES GENERAL RAMÍREZ",
+      "cabezas_estimadas": null,
+      "url_catalogo": "https://ftp.rural-server.com/remates/images/j7aZef9C9Gdia8V9.png",
       "url_youtube": null
     },
     {
@@ -408,6 +369,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Haciendas Generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "manual-2026-09-30-hasenkamp",
+      "fecha": "2026-09-30",
+      "hora": null,
+      "consignataria": "Consignataria Hasenkamp",
+      "localidad": "Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "reproductores",
+      "titulo": "Especial Reproductores y Vientres",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
