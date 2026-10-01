@@ -47,11 +47,12 @@ def main():
         datetime.fromisoformat(data["periodo"]["hasta"]).date()
         - datetime.fromisoformat(hoy).date()
     ).days
-    data["fuente"] = "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera"
+    data["fuente"] = "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz"
     data["fuentes"] = [
         "https://etchevehere-rural.com.ar/",
         "https://chsrl.com.ar/proximos-remates/",
         "https://laganadera.com.ar/remates",
+        "https://ildarraz.com.ar/calendario",
     ]
     data["actualizado"] = datetime.now(TZ).isoformat()
 
