@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-01T18:05:00-03:00",
+  "actualizado": "2026-10-08T12:40:00-03:00",
   "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + Daroca Buschiazzo",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz",
   "periodo": {
@@ -7,7 +7,7 @@
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 79,
+  "cantidad": 86,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -577,7 +577,7 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "GORDO, INVERNADA y CRÍA",
-      "cabezas_estimadas": 1000,
+      "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
     },
@@ -589,20 +589,7 @@
       "localidad": "Rosario",
       "provincia": "SANTA FE",
       "tipo": "general",
-      "titulo": "Remate Habitual",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "duarte-2026-10-09",
-      "fecha": "2026-10-09",
-      "hora": null,
-      "consignataria": "Consignataria Duarte",
-      "localidad": "Sociedad Rural Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Haciendas Generales",
+      "titulo": "Remate Habitual Rosgan",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -610,12 +597,12 @@
     {
       "id": "ildarraz-2026-10-10-cuarto-de-milla",
       "fecha": "2026-10-10",
-      "hora": "19:30",
+      "hora": null,
       "consignataria": "Ildarraz",
-      "localidad": "Estación Matilde",
-      "provincia": "SANTA FE",
+      "localidad": "Haras El Tala",
+      "provincia": "ENTRE RÍOS",
       "tipo": "especial",
-      "titulo": "Gran Remate Cuarto de Milla – 2° Remate",
+      "titulo": "Segunda edición Remate Cuarto de Milla",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -625,7 +612,7 @@
       "fecha": "2026-10-13",
       "hora": "15:00",
       "consignataria": "Coop. La Ganadera",
-      "localidad": "Maria Grande",
+      "localidad": "María Grande",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "REMATE FERIA EN SOCIEDAD RURAL MARÍA GRANDE",
@@ -634,14 +621,40 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-14-feria-maria-dolores",
-      "fecha": "2026-10-14",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
+      "id": "ildarraz-2026-10-13-rosgan-aniversario",
+      "fecha": "2026-10-13",
+      "hora": null,
+      "consignataria": "Ildarraz",
+      "localidad": "Rosario",
+      "provincia": "SANTA FE",
+      "tipo": "invernada",
+      "titulo": "18° Aniversario Rosgan – Centro Cultural Universitario de Rosario",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "coop-pronunciamiento-2026-10-13-basavilbaso",
+      "fecha": "2026-10-13",
+      "hora": null,
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
+      "localidad": "Basavilbaso",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Feria María Dolores",
+      "titulo": "Remate en predio ferial de la cooperativa",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "fraccaroli-ronconi-2026-10-14-villa-elisa",
+      "fecha": "2026-10-14",
+      "hora": "10:00",
+      "consignataria": "Fraccaroli y Ronconi S.R.L.",
+      "localidad": "Villa Elisa",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate en instalaciones",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -655,6 +668,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "GORDO, INVERNADA y CRÍA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "casa-usandizaga-2026-10-14-gualeguaychu",
+      "fecha": "2026-10-14",
+      "hora": "15:30",
+      "consignataria": "Casa Usandizaga S.A.",
+      "localidad": "Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "invernada",
+      "titulo": "Gordo | Invernada | Cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-14-feria-maria-dolores",
+      "fecha": "2026-10-14",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Feria María Dolores – General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria María Dolores",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -678,9 +717,9 @@
       "hora": "15:00",
       "consignataria": "Consignataria Hasenkamp S.R.L.",
       "localidad": "Rosario del Tala",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "GORDO, INVERNADA y CRÍA",
+      "provincia": "SANTA FE",
+      "tipo": "general",
+      "titulo": "Feria Don Luis",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -699,14 +738,27 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-16-federal",
+      "id": "saenz-valiente-2026-10-16-corrientes",
+      "fecha": "2026-10-16",
+      "hora": "10:00",
+      "consignataria": "Sáenz Valiente, Bullrich y Cía.",
+      "localidad": "Sociedad Rural de Corrientes",
+      "provincia": "CORRIENTES",
+      "tipo": "televisado",
+      "titulo": "Remate televisado por Canal Rural",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "ildarraz-2026-10-16-san-jaime",
       "fecha": "2026-10-16",
       "hora": "14:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Federal",
+      "consignataria": "Ildarraz",
+      "localidad": "San Jaime",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Federal",
+      "titulo": "Remate Feria San Jaime – diferido por lluvias",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -720,6 +772,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "GORDO, INVERNADA y CRÍA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-16-federal",
+      "fecha": "2026-10-16",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Federal",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Federal",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "consignataria-duarte-2026-10-16",
+      "fecha": "2026-10-16",
+      "hora": null,
+      "consignataria": "Consignataria Duarte",
+      "localidad": "Sociedad Rural Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate anunciado",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -803,6 +881,19 @@
       "url_youtube": null
     },
     {
+      "id": "consignataria-sur-2026-10-21-gualeguaychu",
+      "fecha": "2026-10-21",
+      "hora": null,
+      "consignataria": "Consignataria del Sur",
+      "localidad": "Sociedad Rural Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "laganadera-2026-10-22",
       "fecha": "2026-10-22",
       "hora": "09:30",
@@ -822,8 +913,8 @@
       "consignataria": "Consignataria Hasenkamp S.R.L.",
       "localidad": "Gualeguay",
       "provincia": "ENTRE RÍOS",
-      "tipo": "invernada",
-      "titulo": "GORDO, INVERNADA y CRÍA",
+      "tipo": "general",
+      "titulo": "Sociedad Rural",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1045,6 +1136,7 @@
     "https://www.grupoguarino.com.ar/cartelera/",
     "https://chsrl.com.ar/",
     "Calendario actualizado con próximos remates de Consignataria Hasenkamp según información proporcionada por el usuario.",
-    "https://ildarraz.com.ar/calendario"
+    "https://ildarraz.com.ar/calendario",
+    "Información aportada por usuario (agenda actualizada 08/10/2026)."
   ]
 }
