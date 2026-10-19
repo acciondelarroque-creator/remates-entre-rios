@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-10-08T12:40:00-03:00",
-  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + Daroca Buschiazzo",
+  "actualizado": "2026-10-19T08:00:00-03:00",
+  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz",
   "periodo": {
     "desde": "2026-09-12",
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 86,
+  "cantidad": 92,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -842,6 +842,32 @@
       "url_youtube": null
     },
     {
+      "id": "casa-usandizaga-2026-10-20-paranacito",
+      "fecha": "2026-10-20",
+      "hora": null,
+      "consignataria": "Casa Usandizaga S.A. – NEA",
+      "localidad": "Paranacito",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "fraccarolli-ronconi-2026-10-21-urdinarrain",
+      "fecha": "2026-10-21",
+      "hora": "10:00",
+      "consignataria": "Fraccarolli y Ronconi S.R.L.",
+      "localidad": "Urdinarrain",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales – Gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "ildarraz-2026-10-21-federal",
       "fecha": "2026-10-21",
       "hora": "14:30",
@@ -959,6 +985,32 @@
       "url_youtube": null
     },
     {
+      "id": "casa-usandizaga-2026-10-27-paranacito",
+      "fecha": "2026-10-27",
+      "hora": null,
+      "consignataria": "Casa Usandizaga S.A. – NEA",
+      "localidad": "Paranacito",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "campos-bajos-2026-10-28-gualeguay",
+      "fecha": "2026-10-28",
+      "hora": "14:00",
+      "consignataria": "Campos Bajos S.R.L.",
+      "localidad": "Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales – Gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "hasenkamp-2026-10-28-hasenkamp",
       "fecha": "2026-10-28",
       "hora": "15:00",
@@ -998,6 +1050,19 @@
       "url_youtube": null
     },
     {
+      "id": "mendizabal-2026-10-30-gualeguay",
+      "fecha": "2026-10-30",
+      "hora": "14:30",
+      "consignataria": "Ricardo Mendizábal Consignaciones",
+      "localidad": "Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales – 1.000 cabezas; gordo, invernada y cría; RENSPA",
+      "cabezas_estimadas": 1000,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-03-feria-maria-dolores",
       "fecha": "2026-11-03",
       "hora": "09:30",
@@ -1006,6 +1071,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Feria María Dolores",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "casa-usandizaga-2026-11-04-gualeguaychu",
+      "fecha": "2026-11-04",
+      "hora": null,
+      "consignataria": "Casa Usandizaga S.A. – NEA",
+      "localidad": "Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1137,6 +1215,7 @@
     "https://chsrl.com.ar/",
     "Calendario actualizado con próximos remates de Consignataria Hasenkamp según información proporcionada por el usuario.",
     "https://ildarraz.com.ar/calendario",
-    "Información aportada por usuario (agenda actualizada 08/10/2026)."
+    "Información aportada por usuario (agenda actualizada 08/10/2026).",
+    "Información aportada por el usuario (flyers Casa Usandizaga, Fraccarolli y Ronconi, Campos Bajos y Ricardo Mendizábal)."
   ]
 }
