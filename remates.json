@@ -1,6 +1,6 @@
 {
   "actualizado": "2026-10-20T10:18:00-03:00",
-  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario + Haciendas Generales",
+  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario + Cooperativa El Pronunciamiento",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz",
   "periodo": {
     "desde": "2026-09-12",
@@ -1011,10 +1011,10 @@
       "url_youtube": null
     },
     {
-      "id": "haciendas-generales-2026-10-28-rosario-del-tala",
+      "id": "coop-pronunciamiento-2026-10-28-rosario-del-tala",
       "fecha": "2026-10-28",
       "hora": "14:30",
-      "consignataria": "Haciendas Generales",
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
       "localidad": "Rosario del Tala",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
@@ -1089,10 +1089,10 @@
       "url_youtube": null
     },
     {
-      "id": "haciendas-generales-2026-11-03-basavilbaso",
+      "id": "coop-pronunciamiento-2026-11-03-basavilbaso",
       "fecha": "2026-11-03",
       "hora": null,
-      "consignataria": "Haciendas Generales",
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
       "localidad": "Basavilbaso",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
@@ -1243,6 +1243,6 @@
     "https://ildarraz.com.ar/calendario",
     "Información aportada por usuario (agenda actualizada 08/10/2026).",
     "Información aportada por el usuario (flyers Casa Usandizaga, Fraccarolli y Ronconi, Campos Bajos y Ricardo Mendizábal).",
-    "Información aportada por el usuario (flyers Haciendas Generales: Rosario del Tala 28/10 y Basavilbaso 03/11)."
+    "Información aportada por el usuario (flyers de Cooperativa El Pronunciamiento: Rosario del Tala 28/10 y Basavilbaso 03/11)."
   ]
 }
