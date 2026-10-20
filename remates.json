@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-10-19T08:00:00-03:00",
-  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario",
+  "actualizado": "2026-10-20T10:18:00-03:00",
+  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario + Haciendas Generales",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz",
   "periodo": {
     "desde": "2026-09-12",
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 92,
+  "cantidad": 94,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -1011,6 +1011,19 @@
       "url_youtube": null
     },
     {
+      "id": "haciendas-generales-2026-10-28-rosario-del-tala",
+      "fecha": "2026-10-28",
+      "hora": "14:30",
+      "consignataria": "Haciendas Generales",
+      "localidad": "Rosario del Tala",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales – cierre de encierre martes 27",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "hasenkamp-2026-10-28-hasenkamp",
       "fecha": "2026-10-28",
       "hora": "15:00",
@@ -1071,6 +1084,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Feria María Dolores",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "haciendas-generales-2026-11-03-basavilbaso",
+      "fecha": "2026-11-03",
+      "hora": null,
+      "consignataria": "Haciendas Generales",
+      "localidad": "Basavilbaso",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales – cierre de encierre lunes 2",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1216,6 +1242,7 @@
     "Calendario actualizado con próximos remates de Consignataria Hasenkamp según información proporcionada por el usuario.",
     "https://ildarraz.com.ar/calendario",
     "Información aportada por usuario (agenda actualizada 08/10/2026).",
-    "Información aportada por el usuario (flyers Casa Usandizaga, Fraccarolli y Ronconi, Campos Bajos y Ricardo Mendizábal)."
+    "Información aportada por el usuario (flyers Casa Usandizaga, Fraccarolli y Ronconi, Campos Bajos y Ricardo Mendizábal).",
+    "Información aportada por el usuario (flyers Haciendas Generales: Rosario del Tala 28/10 y Basavilbaso 03/11)."
   ]
 }
