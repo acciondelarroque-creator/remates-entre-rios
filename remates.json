@@ -1,13 +1,13 @@
 {
-  "actualizado": "2026-10-20T10:18:00-03:00",
-  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz + remates aportados por el usuario + Cooperativa El Pronunciamiento",
-  "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz",
+  "actualizado": "2026-10-21T10:26:00-03:00",
+  "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz Hermanos + remates aportados por el usuario + Cooperativa El Pronunciamiento",
+  "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz + https://ildarraz.com.ar/calendario",
   "periodo": {
     "desde": "2026-09-12",
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 94,
+  "cantidad": 96,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -231,6 +231,19 @@
       "url_youtube": null
     },
     {
+      "id": "etchevehere-2026-09-24-concepcion",
+      "fecha": "2026-09-24",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Concepción del Uruguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "especial",
+      "titulo": "Prueba Pastoril Mesopotámica Hereford",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "laganadera-2026-09-24",
       "fecha": "2026-09-24",
       "hora": "14:00",
@@ -252,19 +265,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "invernada",
       "titulo": "GORDO, INVERNADA y CRÍA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "etchevehere-2026-09-24-concepcion",
-      "fecha": "2026-09-24",
-      "hora": null,
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Concepción del Uruguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "especial",
-      "titulo": "Prueba Pastoril Mesopotámica Hereford",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -348,6 +348,19 @@
       "url_youtube": null
     },
     {
+      "id": "coop-pronunciamiento-2026-09-30-bovril",
+      "fecha": "2026-09-30",
+      "hora": null,
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
+      "localidad": "Bovril",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria Don Leandro de Bovril",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "hasenkamp-2026-09-30-hasenkamp",
       "fecha": "2026-09-30",
       "hora": "14:00",
@@ -369,19 +382,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Feria San Jaime",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "coop-pronunciamiento-2026-09-30-bovril",
-      "fecha": "2026-09-30",
-      "hora": null,
-      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
-      "localidad": "Bovril",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria Don Leandro de Bovril",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -478,6 +478,19 @@
       "url_youtube": null
     },
     {
+      "id": "coop-pronunciamiento-2026-10-07-rosario-del-tala",
+      "fecha": "2026-10-07",
+      "hora": null,
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
+      "localidad": "Rosario del Tala",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate en Sociedad Rural de Rosario del Tala",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "fraccaroli-ronconi-2026-10-07-urdinarrain",
       "fecha": "2026-10-07",
       "hora": "10:00",
@@ -530,14 +543,14 @@
       "url_youtube": null
     },
     {
-      "id": "coop-pronunciamiento-2026-10-07-rosario-del-tala",
-      "fecha": "2026-10-07",
+      "id": "etchevehere-2026-10-08-rosario",
+      "fecha": "2026-10-08",
       "hora": null,
-      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
-      "localidad": "Rosario del Tala",
-      "provincia": "ENTRE RÍOS",
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Rosario",
+      "provincia": "SANTA FE",
       "tipo": "general",
-      "titulo": "Remate en Sociedad Rural de Rosario del Tala",
+      "titulo": "Remate Habitual Rosgan",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -582,19 +595,6 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-08-rosario",
-      "fecha": "2026-10-08",
-      "hora": null,
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Rosario",
-      "provincia": "SANTA FE",
-      "tipo": "general",
-      "titulo": "Remate Habitual Rosgan",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "ildarraz-2026-10-10-cuarto-de-milla",
       "fecha": "2026-10-10",
       "hora": null,
@@ -603,19 +603,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "especial",
       "titulo": "Segunda edición Remate Cuarto de Milla",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "laganadera-2026-10-13",
-      "fecha": "2026-10-13",
-      "hora": "15:00",
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "María Grande",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "REMATE FERIA EN SOCIEDAD RURAL MARÍA GRANDE",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -642,6 +629,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Remate en predio ferial de la cooperativa",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-10-13",
+      "fecha": "2026-10-13",
+      "hora": "15:00",
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "María Grande",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "REMATE FERIA EN SOCIEDAD RURAL MARÍA GRANDE",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-14-feria-maria-dolores",
+      "fecha": "2026-10-14",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Feria María Dolores – General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria María Dolores",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -686,19 +699,6 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-14-feria-maria-dolores",
-      "fecha": "2026-10-14",
-      "hora": null,
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria María Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "laganadera-2026-10-15",
       "fecha": "2026-10-15",
       "hora": "09:30",
@@ -720,6 +720,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Feria Don Luis",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-16-federal",
+      "fecha": "2026-10-16",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Federal",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Federal",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "consignataria-duarte-2026-10-16",
+      "fecha": "2026-10-16",
+      "hora": null,
+      "consignataria": "Consignataria Duarte",
+      "localidad": "Sociedad Rural Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate anunciado",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -777,27 +803,14 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-16-federal",
-      "fecha": "2026-10-16",
+      "id": "casa-usandizaga-2026-10-20-paranacito",
+      "fecha": "2026-10-20",
       "hora": null,
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Federal",
+      "consignataria": "Casa Usandizaga S.A. – NEA",
+      "localidad": "Paranacito",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Federal",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "consignataria-duarte-2026-10-16",
-      "fecha": "2026-10-16",
-      "hora": null,
-      "consignataria": "Consignataria Duarte",
-      "localidad": "Sociedad Rural Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Próximo remate anunciado",
+      "titulo": "Haciendas generales",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -842,14 +855,14 @@
       "url_youtube": null
     },
     {
-      "id": "casa-usandizaga-2026-10-20-paranacito",
-      "fecha": "2026-10-20",
+      "id": "consignataria-sur-2026-10-21-gualeguaychu",
+      "fecha": "2026-10-21",
       "hora": null,
-      "consignataria": "Casa Usandizaga S.A. – NEA",
-      "localidad": "Paranacito",
+      "consignataria": "Consignataria del Sur",
+      "localidad": "Sociedad Rural Gualeguaychú",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Haciendas generales",
+      "titulo": "Remate",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -871,11 +884,11 @@
       "id": "ildarraz-2026-10-21-federal",
       "fecha": "2026-10-21",
       "hora": "14:30",
-      "consignataria": "Ildarraz",
-      "localidad": "Sociedad Rural Federal",
+      "consignataria": "Ildarraz Hermanos",
+      "localidad": "Sociedad Rural de Federal",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Remate Feria Federal – Feria de Octubre",
+      "titulo": "Feria Federal",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -902,19 +915,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "REMATE FERIA 5 BOCAS - PASO DE LA LAGUNA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "consignataria-sur-2026-10-21-gualeguaychu",
-      "fecha": "2026-10-21",
-      "hora": null,
-      "consignataria": "Consignataria del Sur",
-      "localidad": "Sociedad Rural Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Remate",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -959,6 +959,19 @@
       "url_youtube": null
     },
     {
+      "id": "ildarraz-2026-10-23-ceibas",
+      "fecha": "2026-10-23",
+      "hora": "14:30",
+      "consignataria": "Ildarraz Hermanos",
+      "localidad": "Predio Las Achiras, Ceibas",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria Ceibas",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "laganadera-2026-10-26",
       "fecha": "2026-10-26",
       "hora": "15:00",
@@ -972,19 +985,6 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-10-27-feria-maria-dolores",
-      "fecha": "2026-10-27",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria María Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "casa-usandizaga-2026-10-27-paranacito",
       "fecha": "2026-10-27",
       "hora": null,
@@ -993,6 +993,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-27-feria-maria-dolores",
+      "fecha": "2026-10-27",
+      "hora": "09:30",
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Feria María Dolores – General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria María Dolores",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1019,6 +1032,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Remate de haciendas generales – cierre de encierre martes 27",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "ildarraz-2026-10-28-chajari",
+      "fecha": "2026-10-28",
+      "hora": "14:30",
+      "consignataria": "Ildarraz Hermanos",
+      "localidad": "Sociedad Rural de Chajarí",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria Chajarí",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1076,19 +1102,6 @@
       "url_youtube": null
     },
     {
-      "id": "etchevehere-2026-11-03-feria-maria-dolores",
-      "fecha": "2026-11-03",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria María Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "coop-pronunciamiento-2026-11-03-basavilbaso",
       "fecha": "2026-11-03",
       "hora": null,
@@ -1097,6 +1110,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Remate de haciendas generales – cierre de encierre lunes 2",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-11-03-feria-maria-dolores",
+      "fecha": "2026-11-03",
+      "hora": "09:30",
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Feria María Dolores – General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria María Dolores",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1128,19 +1154,6 @@
       "url_youtube": null
     },
     {
-      "id": "ildarraz-2026-11-11-rosgan",
-      "fecha": "2026-11-11",
-      "hora": "10:00",
-      "consignataria": "Ildarraz",
-      "localidad": "Bolsa de Comercio de Rosario",
-      "provincia": "SANTA FE",
-      "tipo": "invernada",
-      "titulo": "Remate Habitual Rosgan",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "etchevehere-2026-11-11-rosario",
       "fecha": "2026-11-11",
       "hora": null,
@@ -1149,6 +1162,19 @@
       "provincia": "SANTA FE",
       "tipo": "general",
       "titulo": "Remate Habitual",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "ildarraz-2026-11-11-rosgan",
+      "fecha": "2026-11-11",
+      "hora": "10:00",
+      "consignataria": "Ildarraz",
+      "localidad": "Bolsa de Comercio de Rosario",
+      "provincia": "SANTA FE",
+      "tipo": "invernada",
+      "titulo": "Remate Habitual Rosgan",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -1243,6 +1269,7 @@
     "https://ildarraz.com.ar/calendario",
     "Información aportada por usuario (agenda actualizada 08/10/2026).",
     "Información aportada por el usuario (flyers Casa Usandizaga, Fraccarolli y Ronconi, Campos Bajos y Ricardo Mendizábal).",
-    "Información aportada por el usuario (flyers de Cooperativa El Pronunciamiento: Rosario del Tala 28/10 y Basavilbaso 03/11)."
+    "Información aportada por el usuario (flyers de Cooperativa El Pronunciamiento: Rosario del Tala 28/10 y Basavilbaso 03/11).",
+    "Información aportada por el usuario (flyer Ildarraz Hermanos: Federal 21/10, Ceibas 23/10 y Chajarí 28/10 de 2026)."
   ]
 }
