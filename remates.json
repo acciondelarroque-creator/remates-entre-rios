@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-26T10:39:00-03:00",
+  "actualizado": "2026-10-26T10:48:00-03:00",
   "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz Hermanos + remates aportados por el usuario + Cooperativa El Pronunciamiento + Consignataria Duarte + Consignataria Spiazzi",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz + https://ildarraz.com.ar/calendario + https://www.consignatariaduarte.com.ar",
   "periodo": {
@@ -7,7 +7,7 @@
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 102,
+  "cantidad": 103,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -1128,6 +1128,19 @@
       "url_youtube": null
     },
     {
+      "id": "colombo-colombo-2026-10-30-hasenkamp",
+      "fecha": "2026-10-30",
+      "hora": "15:00",
+      "consignataria": "Colombo y Colombo",
+      "localidad": "Sociedad Rural de Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate físico",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-03-feria-maria-dolores",
       "fecha": "2026-11-03",
       "hora": "09:30",
@@ -1354,6 +1367,7 @@
     "Información aportada por el usuario (flyer Daroca Buschiazzo: remate diferido del 08/10 al 28/10/2026, 15 hs, Sociedad Rural de Gualeguaychú).",
     "Información aportada por el usuario (Consignataria del Sur: remate del 11/11/2026 en Sociedad Rural de Gualeguaychú; haciendas generales, gordo, invernada y cría).",
     "Información aportada por el usuario (flyer Fraccaroli y Ronconi: remate del 04/11/2026 a las 10 hs en San José de Urdinarrain; haciendas generales, gordo, invernada y cría).",
-    "Información aportada por el usuario (flyer Sáenz Valiente, Bullrich: 22.ª Exposición Nacional de Haciendas de Consumo 5 Estrellas, 05/11/2026, 9:30 hs, MAG)."
+    "Información aportada por el usuario (flyer Sáenz Valiente, Bullrich: 22.ª Exposición Nacional de Haciendas de Consumo 5 Estrellas, 05/11/2026, 9:30 hs, MAG).",
+    "Información aportada por el usuario (flyer Colombo y Colombo: remate físico 30/10/2026, 15 hs, Sociedad Rural de Hasenkamp)."
   ]
 }
