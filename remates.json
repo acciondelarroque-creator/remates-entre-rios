@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-26T09:02:00-03:00",
+  "actualizado": "2026-10-26T10:39:00-03:00",
   "fuente": "Etchevehere Rural + Consignataria Hasenkamp + Coop. La Ganadera + Ildarraz Hermanos + remates aportados por el usuario + Cooperativa El Pronunciamiento + Consignataria Duarte + Consignataria Spiazzi",
   "url_fuente": "https://etchevehere-rural.com.ar/ + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/remates + Ildarraz + https://ildarraz.com.ar/calendario + https://www.consignatariaduarte.com.ar",
   "periodo": {
@@ -7,7 +7,7 @@
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 101,
+  "cantidad": 102,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -1193,6 +1193,19 @@
       "url_youtube": null
     },
     {
+      "id": "saenz-valiente-2026-11-05-mag-exposicion-consumo",
+      "fecha": "2026-11-05",
+      "hora": "09:30",
+      "consignataria": "Sáenz Valiente, Bullrich y Cía.",
+      "localidad": "Mercado Agroganadero (MAG)",
+      "provincia": "BUENOS AIRES",
+      "tipo": "especial",
+      "titulo": "22.ª Exposición Nacional de Haciendas de Consumo 5 Estrellas",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-10-feria-maria-dolores",
       "fecha": "2026-11-10",
       "hora": "09:30",
@@ -1340,6 +1353,7 @@
     "Información aportada por el usuario (flyer Consignataria Spiazzi: remate 28/10/2026, 10 hs, Urdinarrain).",
     "Información aportada por el usuario (flyer Daroca Buschiazzo: remate diferido del 08/10 al 28/10/2026, 15 hs, Sociedad Rural de Gualeguaychú).",
     "Información aportada por el usuario (Consignataria del Sur: remate del 11/11/2026 en Sociedad Rural de Gualeguaychú; haciendas generales, gordo, invernada y cría).",
-    "Información aportada por el usuario (flyer Fraccaroli y Ronconi: remate del 04/11/2026 a las 10 hs en San José de Urdinarrain; haciendas generales, gordo, invernada y cría)."
+    "Información aportada por el usuario (flyer Fraccaroli y Ronconi: remate del 04/11/2026 a las 10 hs en San José de Urdinarrain; haciendas generales, gordo, invernada y cría).",
+    "Información aportada por el usuario (flyer Sáenz Valiente, Bullrich: 22.ª Exposición Nacional de Haciendas de Consumo 5 Estrellas, 05/11/2026, 9:30 hs, MAG)."
   ]
 }
