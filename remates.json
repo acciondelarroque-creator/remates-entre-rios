@@ -7,7 +7,7 @@
     "hasta": "2026-12-18",
     "dias": 97
   },
-  "cantidad": 99,
+  "cantidad": 100,
   "remates": [
     {
       "id": "hasenkamp-2026-09-12-gualeguay",
@@ -1219,6 +1219,19 @@
       "url_youtube": null
     },
     {
+      "id": "consignataria-del-sur-2026-11-11-gualeguaychu",
+      "fecha": "2026-11-11",
+      "hora": null,
+      "consignataria": "Consignataria del Sur",
+      "localidad": "Sociedad Rural de Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales – gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-13-federal",
       "fecha": "2026-11-13",
       "hora": "14:30",
@@ -1312,6 +1325,7 @@
     "Información aportada por el usuario (flyer Ildarraz Hermanos: Federal 21/10, Ceibas 23/10 y Chajarí 28/10 de 2026).",
     "Información aportada por el usuario (flyer Consignataria Duarte: remate 04/11/2026 en Las Achiras, Ceibas).",
     "Información aportada por el usuario (flyer Consignataria Spiazzi: remate 28/10/2026, 10 hs, Urdinarrain).",
-    "Información aportada por el usuario (flyer Daroca Buschiazzo: remate diferido del 08/10 al 28/10/2026, 15 hs, Sociedad Rural de Gualeguaychú)."
+    "Información aportada por el usuario (flyer Daroca Buschiazzo: remate diferido del 08/10 al 28/10/2026, 15 hs, Sociedad Rural de Gualeguaychú).",
+    "Información aportada por el usuario (Consignataria del Sur: remate del 11/11/2026 en Sociedad Rural de Gualeguaychú; haciendas generales, gordo, invernada y cría)."
   ]
 }
