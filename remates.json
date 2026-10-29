@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-27T09:03:00-03:00",
+  "actualizado": "2026-10-29T13:22:00-03:00",
   "fuente": "Etchevehere Rural + Cooperativa La Ganadera + datos/flyers aportados por Julio (incluye Consignataria Hasenkamp y consignatarias participantes)",
   "url_fuente": "https://etchevehere-rural.com.ar/hacienda/remates + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/ + datos/flyers aportados por Julio",
   "periodo": {
@@ -311,7 +311,7 @@
     {
       "id": "consignataria-del-sur-2026-11-11-gualeguaychu",
       "fecha": "2026-11-11",
-      "hora": null,
+      "hora": "15:00",
       "consignataria": "Consignataria del Sur",
       "localidad": "Sociedad Rural de Gualeguaychú",
       "provincia": "ENTRE RÍOS",
