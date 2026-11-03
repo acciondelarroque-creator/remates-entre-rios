@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-03T10:49:00-03:00",
+  "actualizado": "2026-11-03T10:50:00-03:00",
   "fuente": "Etchevehere Rural + Cooperativa La Ganadera + datos/flyers aportados por Julio (incluye Consignataria Hasenkamp y consignatarias participantes)",
   "url_fuente": "https://etchevehere-rural.com.ar/hacienda/remates + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/ + datos/flyers aportados por Julio",
   "periodo": {
@@ -7,7 +7,7 @@
     "hasta": "2026-12-01",
     "dias": 35
   },
-  "cantidad": 37,
+  "cantidad": 38,
   "remates": [
     {
       "id": "etchevehere-2026-10-27-feria-maria-dolores",
@@ -374,6 +374,19 @@
       "url_youtube": null
     },
     {
+      "id": "casa-usandizaga-2026-11-11-paranacito",
+      "fecha": "2026-11-11",
+      "hora": null,
+      "consignataria": "Casa Usandizaga S.A.",
+      "localidad": "Paranacito",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate NEA noviembre – presencial y streaming",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-11-12-sociedad-rural-de-nogoya",
       "fecha": "2026-11-12",
       "hora": "15:00",
@@ -497,6 +510,7 @@
     "https://laganadera.com.ar/",
     "Información aportada por Julio: calendario de Consignataria Hasenkamp (remate 28/10/2026 en Hasenkamp).",
     "Información aportada por Julio: flyers de Casa Usandizaga (Paranacito 27/10 y Gualeguaychú 04/11), Consignataria Spiazzi (Urdinarrain 28/10), Campos Bajos (Gualeguay 28/10), Cooperativa El Pronunciamiento (Rosario del Tala 28/10 y Basavilbaso 03/11), Ildarraz Hermanos (Chajarí 28/10), Daroca Buschiazzo (Gualeguaychú 28/10), Ricardo Mendizábal (Gualeguay 30/10), Colombo y Colombo (Hasenkamp 30/10), Fraccaroli y Ronconi (Urdinarrain 04/11), Consignataria Duarte (Ceibas 04/11) y Consignataria del Sur (Gualeguaychú 11/11).",
-    "Información aportada por Julio: calendario de remates GORDO, INVERNADA y CRIA a las 15:00 en Feria Don Luis (Rosario del Tala) y sociedades rurales de Hasenkamp, Gualeguay, Nogoyá y La Paz, con fechas del 03/11 al 01/12/2026."
+    "Información aportada por Julio: calendario de remates GORDO, INVERNADA y CRIA a las 15:00 en Feria Don Luis (Rosario del Tala) y sociedades rurales de Hasenkamp, Gualeguay, Nogoyá y La Paz, con fechas del 03/11 al 01/12/2026.",
+    "Información aportada por Julio: Casa Usandizaga S.A., Remates NEA noviembre, miércoles 11/11/2026 en Paranacito (Entre Ríos), presencial y streaming; horario no informado."
   ]
 }
