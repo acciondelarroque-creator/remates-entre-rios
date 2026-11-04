@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-03T10:52:00-03:00",
+  "actualizado": "2026-11-04T10:10:00-03:00",
   "fuente": "Etchevehere Rural + Cooperativa La Ganadera + datos/flyers aportados por Julio (incluye Consignataria Hasenkamp y consignatarias participantes)",
   "url_fuente": "https://etchevehere-rural.com.ar/hacienda/remates + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/ + datos/flyers aportados por Julio",
   "periodo": {
@@ -7,7 +7,7 @@
     "hasta": "2026-12-01",
     "dias": 35
   },
-  "cantidad": 39,
+  "cantidad": 43,
   "remates": [
     {
       "id": "etchevehere-2026-10-27-feria-maria-dolores",
@@ -88,19 +88,6 @@
       "url_youtube": null
     },
     {
-      "id": "daroca-buschiazzo-2026-10-28-gualeguaychu",
-      "fecha": "2026-10-28",
-      "hora": "15:00",
-      "consignataria": "Daroca Buschiazzo",
-      "localidad": "Sociedad Rural de Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Remate de haciendas generales – diferido del 8 de octubre",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "hasenkamp-2026-10-28-hasenkamp",
       "fecha": "2026-10-28",
       "hora": "15:00",
@@ -122,6 +109,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "REMATE FERIA SOCIEDAD RURAL MARÍA GRANDE",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "daroca-buschiazzo-2026-10-28-gualeguaychu",
+      "fecha": "2026-10-28",
+      "hora": "15:00",
+      "consignataria": "Daroca Buschiazzo",
+      "localidad": "Sociedad Rural de Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales – diferido del 8 de octubre",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -205,19 +205,6 @@
       "url_youtube": null
     },
     {
-      "id": "laganadera-2026-11-03",
-      "fecha": "2026-11-03",
-      "hora": "15:00",
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "La Paz",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "REMATE FERIA EN SOCIEDAD RURAL LA PAZ",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "aporte-julio-2026-11-03-feria-don-luis-rosario-del-tala",
       "fecha": "2026-11-03",
       "hora": "15:00",
@@ -226,6 +213,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-03",
+      "fecha": "2026-11-03",
+      "hora": "15:00",
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "La Paz",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "REMATE FERIA EN SOCIEDAD RURAL LA PAZ",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -257,19 +257,6 @@
       "url_youtube": null
     },
     {
-      "id": "laganadera-2026-11-04",
-      "fecha": "2026-11-04",
-      "hora": "15:00",
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "Villaguay",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "REMATE FERIA 5 BOCAS - PASO DE LA LAGUNA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "aporte-julio-2026-11-04-sociedad-rural-de-hasenkamp",
       "fecha": "2026-11-04",
       "hora": "15:00",
@@ -278,6 +265,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-04",
+      "fecha": "2026-11-04",
+      "hora": "15:00",
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "Villaguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "REMATE FERIA 5 BOCAS - PASO DE LA LAGUNA",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -387,6 +387,32 @@
       "url_youtube": null
     },
     {
+      "id": "laganadera-2026-11-11-maria-grande",
+      "fecha": "2026-11-11",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "María Grande",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate – María Grande",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-11-11-remate-habitual",
+      "fecha": "2026-11-11",
+      "hora": null,
+      "consignataria": "Etchevehere Rural",
+      "localidad": "A confirmar",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate Habitual",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-11-12-sociedad-rural-de-nogoya",
       "fecha": "2026-11-12",
       "hora": "15:00",
@@ -421,6 +447,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Feria María Dolores",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-17-la-paz",
+      "fecha": "2026-11-17",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "La Paz",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate – La Paz",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -504,6 +543,19 @@
       "url_youtube": null
     },
     {
+      "id": "laganadera-2026-11-25-villa-elisa",
+      "fecha": "2026-11-25",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "Villa Elisa",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate – Villa Elisa",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-12-01-sociedad-rural-de-nogoya",
       "fecha": "2026-12-01",
       "hora": "15:00",
@@ -525,6 +577,8 @@
     "Información aportada por Julio: flyers de Casa Usandizaga (Paranacito 27/10 y Gualeguaychú 04/11), Consignataria Spiazzi (Urdinarrain 28/10), Campos Bajos (Gualeguay 28/10), Cooperativa El Pronunciamiento (Rosario del Tala 28/10 y Basavilbaso 03/11), Ildarraz Hermanos (Chajarí 28/10), Daroca Buschiazzo (Gualeguaychú 28/10), Ricardo Mendizábal (Gualeguay 30/10), Colombo y Colombo (Hasenkamp 30/10), Fraccaroli y Ronconi (Urdinarrain 04/11), Consignataria Duarte (Ceibas 04/11) y Consignataria del Sur (Gualeguaychú 11/11).",
     "Información aportada por Julio: calendario de remates GORDO, INVERNADA y CRIA a las 15:00 en Feria Don Luis (Rosario del Tala) y sociedades rurales de Hasenkamp, Gualeguay, Nogoyá y La Paz, con fechas del 03/11 al 01/12/2026.",
     "Información aportada por Julio: Casa Usandizaga S.A., Remates NEA noviembre, miércoles 11/11/2026 en Paranacito (Entre Ríos), presencial y streaming; horario no informado.",
-    "Información aportada por Julio: Consignataria Duarte, remate de haciendas generales el 19/11/2026 en la Sociedad Rural de Gualeguaychú; horario no informado."
+    "Información aportada por Julio: Consignataria Duarte, remate de haciendas generales el 19/11/2026 en la Sociedad Rural de Gualeguaychú; horario no informado.",
+    "Información aportada por Julio: Cooperativa La Ganadera, próximos remates de noviembre 2026: Villaguay 04/11, General Ramírez 05/11, María Grande 11/11, La Paz 17/11 y Villa Elisa 25/11.",
+    "Información aportada por Julio desde Etchevehere Rural: Remate Habitual del 11/11/2026; localidad y horario no informados."
   ]
 }
