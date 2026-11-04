@@ -7,7 +7,7 @@
     "hasta": "2026-12-01",
     "dias": 35
   },
-  "cantidad": 43,
+  "cantidad": 44,
   "remates": [
     {
       "id": "etchevehere-2026-10-27-feria-maria-dolores",
@@ -322,6 +322,19 @@
       "url_youtube": null
     },
     {
+      "id": "saenz-valiente-bullrich-2026-11-05-22-exposicion-haciendas-consumo-5-estrellas",
+      "fecha": "2026-11-05",
+      "hora": "09:30",
+      "consignataria": "Sáenz Valiente, Bullrich",
+      "localidad": "Mercado Agroganadero (MAG), Cañuelas",
+      "provincia": "BUENOS AIRES",
+      "tipo": "general",
+      "titulo": "22° Exposición Nacional de Haciendas de Consumo 5 Estrellas",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-11-05-sociedad-rural-de-gualeguay",
       "fecha": "2026-11-05",
       "hora": "15:00",
@@ -579,6 +592,7 @@
     "Información aportada por Julio: Casa Usandizaga S.A., Remates NEA noviembre, miércoles 11/11/2026 en Paranacito (Entre Ríos), presencial y streaming; horario no informado.",
     "Información aportada por Julio: Consignataria Duarte, remate de haciendas generales el 19/11/2026 en la Sociedad Rural de Gualeguaychú; horario no informado.",
     "Información aportada por Julio: Cooperativa La Ganadera, próximos remates de noviembre 2026: Villaguay 04/11, General Ramírez 05/11, María Grande 11/11, La Paz 17/11 y Villa Elisa 25/11.",
-    "Información aportada por Julio desde Etchevehere Rural: Remate Habitual del 11/11/2026; localidad y horario no informados."
+    "Información aportada por Julio desde Etchevehere Rural: Remate Habitual del 11/11/2026; localidad y horario no informados.",
+    "Información aportada por Julio: flyer de Sáenz Valiente, Bullrich, 22° Exposición Nacional de Haciendas de Consumo 5 Estrellas, jueves 05/11/2026 a las 09:30 en el MAG (Mercado Agroganadero), Cañuelas."
   ]
 }
