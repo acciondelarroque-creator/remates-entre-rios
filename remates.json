@@ -7,7 +7,7 @@
     "hasta": "2026-12-01",
     "dias": 35
   },
-  "cantidad": 44,
+  "cantidad": 45,
   "remates": [
     {
       "id": "etchevehere-2026-10-27-feria-maria-dolores",
@@ -465,6 +465,19 @@
       "url_youtube": null
     },
     {
+      "id": "daroca-buschiazzo-2026-11-17-gualeguaychu",
+      "fecha": "2026-11-17",
+      "hora": "15:00",
+      "consignataria": "Daroca Buschiazzo",
+      "localidad": "Sociedad Rural de Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales – presencial y por streaming",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "laganadera-2026-11-17-la-paz",
       "fecha": "2026-11-17",
       "hora": null,
@@ -593,6 +606,7 @@
     "Información aportada por Julio: Consignataria Duarte, remate de haciendas generales el 19/11/2026 en la Sociedad Rural de Gualeguaychú; horario no informado.",
     "Información aportada por Julio: Cooperativa La Ganadera, próximos remates de noviembre 2026: Villaguay 04/11, General Ramírez 05/11, María Grande 11/11, La Paz 17/11 y Villa Elisa 25/11.",
     "Información aportada por Julio desde Etchevehere Rural: Remate Habitual del 11/11/2026; localidad y horario no informados.",
-    "Información aportada por Julio: flyer de Sáenz Valiente, Bullrich, 22° Exposición Nacional de Haciendas de Consumo 5 Estrellas, jueves 05/11/2026 a las 09:30 en el MAG (Mercado Agroganadero), Cañuelas."
+    "Información aportada por Julio: flyer de Sáenz Valiente, Bullrich, 22° Exposición Nacional de Haciendas de Consumo 5 Estrellas, jueves 05/11/2026 a las 09:30 en el MAG (Mercado Agroganadero), Cañuelas.",
+    "Información aportada por Julio: flyer de Daroca Buschiazzo, remate de haciendas generales el martes 17/11/2026 a las 15:00 en la Sociedad Rural de Gualeguaychú, presencial y por streaming."
   ]
 }
