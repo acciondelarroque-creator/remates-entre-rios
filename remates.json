@@ -1,27 +1,14 @@
 {
-  "actualizado": "2026-11-04T10:10:00-03:00",
-  "fuente": "Etchevehere Rural + Cooperativa La Ganadera + datos/flyers aportados por Julio (incluye Consignataria Hasenkamp y consignatarias participantes)",
+  "actualizado": "2026-11-13T09:21:00-03:00",
+  "fuente": "Etchevehere Rural + Cooperativa La Ganadera + información y flyers aportados por Julio",
   "url_fuente": "https://etchevehere-rural.com.ar/hacienda/remates + https://chsrl.com.ar/proximos-remates/ + https://laganadera.com.ar/ + datos/flyers aportados por Julio",
   "periodo": {
     "desde": "2026-10-27",
-    "hasta": "2026-12-01",
-    "dias": 35
+    "hasta": "2026-12-17",
+    "dias": 52
   },
-  "cantidad": 45,
+  "cantidad": 60,
   "remates": [
-    {
-      "id": "etchevehere-2026-10-27-feria-maria-dolores",
-      "fecha": "2026-10-27",
-      "hora": "09:30",
-      "consignataria": "Etchevehere Rural",
-      "localidad": "Feria María Dolores – General Ramírez",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Feria María Dolores",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
     {
       "id": "casa-usandizaga-2026-10-27-paranacito",
       "fecha": "2026-10-27",
@@ -31,6 +18,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "etchevehere-2026-10-27-feria-maria-dolores",
+      "fecha": "2026-10-27",
+      "hora": "09:30",
+      "consignataria": "Etchevehere Rural",
+      "localidad": "Feria María Dolores – General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Feria María Dolores",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -192,6 +192,19 @@
       "url_youtube": null
     },
     {
+      "id": "coop-pronunciamiento-2026-11-03-basavilbaso",
+      "fecha": "2026-11-03",
+      "hora": null,
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
+      "localidad": "Basavilbaso",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales – cierre de encierre lunes 2",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-03-feria-maria-dolores",
       "fecha": "2026-11-03",
       "hora": "09:30",
@@ -231,14 +244,27 @@
       "url_youtube": null
     },
     {
-      "id": "coop-pronunciamiento-2026-11-03-basavilbaso",
-      "fecha": "2026-11-03",
+      "id": "casa-usandizaga-2026-11-04-gualeguaychu",
+      "fecha": "2026-11-04",
       "hora": null,
-      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
-      "localidad": "Basavilbaso",
+      "consignataria": "Casa Usandizaga S.A. – NEA",
+      "localidad": "Gualeguaychú",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Remate de haciendas generales – cierre de encierre lunes 2",
+      "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "duarte-2026-11-04-ceibas",
+      "fecha": "2026-11-04",
+      "hora": null,
+      "consignataria": "Consignataria Duarte",
+      "localidad": "Las Achiras, Ceibas",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate – Las Achiras, Ceibas",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -278,32 +304,6 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "REMATE FERIA 5 BOCAS - PASO DE LA LAGUNA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "casa-usandizaga-2026-11-04-gualeguaychu",
-      "fecha": "2026-11-04",
-      "hora": null,
-      "consignataria": "Casa Usandizaga S.A. – NEA",
-      "localidad": "Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Haciendas generales",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "duarte-2026-11-04-ceibas",
-      "fecha": "2026-11-04",
-      "hora": null,
-      "consignataria": "Consignataria Duarte",
-      "localidad": "Las Achiras, Ceibas",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Próximo remate – Las Achiras, Ceibas",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -361,32 +361,6 @@
       "url_youtube": null
     },
     {
-      "id": "consignataria-del-sur-2026-11-11-gualeguaychu",
-      "fecha": "2026-11-11",
-      "hora": "15:00",
-      "consignataria": "Consignataria del Sur",
-      "localidad": "Sociedad Rural de Gualeguaychú",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "Haciendas generales – gordo, invernada y cría",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "aporte-julio-2026-11-11-sociedad-rural-de-hasenkamp",
-      "fecha": "2026-11-11",
-      "hora": "15:00",
-      "consignataria": "Consignataria Hasenkamp S.R.L.",
-      "localidad": "Sociedad Rural de Hasenkamp",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "GORDO, INVERNADA y CRIA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "casa-usandizaga-2026-11-11-paranacito",
       "fecha": "2026-11-11",
       "hora": null,
@@ -426,6 +400,32 @@
       "url_youtube": null
     },
     {
+      "id": "consignataria-del-sur-2026-11-11-gualeguaychu",
+      "fecha": "2026-11-11",
+      "hora": "15:00",
+      "consignataria": "Consignataria del Sur",
+      "localidad": "Sociedad Rural de Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales – gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "aporte-julio-2026-11-11-sociedad-rural-de-hasenkamp",
+      "fecha": "2026-11-11",
+      "hora": "15:00",
+      "consignataria": "Consignataria Hasenkamp S.R.L.",
+      "localidad": "Sociedad Rural de Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-11-12-sociedad-rural-de-nogoya",
       "fecha": "2026-11-12",
       "hora": "15:00",
@@ -439,6 +439,19 @@
       "url_youtube": null
     },
     {
+      "id": "spiazzi-2026-11-13-urdinarrain",
+      "fecha": "2026-11-13",
+      "hora": null,
+      "consignataria": "Consignataria Spiazzi",
+      "localidad": "Instalaciones San José, Urdinarrain",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "etchevehere-2026-11-13-federal",
       "fecha": "2026-11-13",
       "hora": "14:30",
@@ -447,6 +460,19 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "9° Remate Aniversario Federal",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-17-la-paz",
+      "fecha": "2026-11-17",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "La Paz",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Próximo remate – La Paz",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -478,14 +504,53 @@
       "url_youtube": null
     },
     {
-      "id": "laganadera-2026-11-17-la-paz",
-      "fecha": "2026-11-17",
+      "id": "campos-bajos-2026-11-18-gualeguay",
+      "fecha": "2026-11-18",
       "hora": null,
-      "consignataria": "Coop. La Ganadera",
-      "localidad": "La Paz",
+      "consignataria": "Campos Bajos S.R.L. Consignataria de Hacienda",
+      "localidad": "Predio Gualeguay Sociedad Rural",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
-      "titulo": "Próximo remate – La Paz",
+      "titulo": "Haciendas generales, gordo, invernada y cría. Contacto: Casella J. José 3444-621025",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-18-villaguay",
+      "fecha": "2026-11-18",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "Villaguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate feria",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "fraccaroli-ronconi-2026-11-18-urdinarrain",
+      "fecha": "2026-11-18",
+      "hora": null,
+      "consignataria": "Fraccaroli y Ronconi S.R.L.",
+      "localidad": "Instalaciones San José, Urdinarrain",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales, gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "ildarraz-2026-11-18-federal",
+      "fecha": "2026-11-18",
+      "hora": "14:30",
+      "consignataria": "Ildarraz Hermanos",
+      "localidad": "Feria Federal, Federal",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate feria",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -496,19 +561,6 @@
       "hora": "15:00",
       "consignataria": "Consignataria Hasenkamp S.R.L.",
       "localidad": "Sociedad Rural de Hasenkamp",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "GORDO, INVERNADA y CRIA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
-      "id": "aporte-julio-2026-11-19-sociedad-rural-de-gualeguay",
-      "fecha": "2026-11-19",
-      "hora": "15:00",
-      "consignataria": "Consignataria Hasenkamp S.R.L.",
-      "localidad": "Sociedad Rural de Gualeguay",
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "GORDO, INVERNADA y CRIA",
@@ -530,6 +582,45 @@
       "url_youtube": null
     },
     {
+      "id": "laganadera-2026-11-19-general-ramirez",
+      "fecha": "2026-11-19",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "General Ramírez",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate feria",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "aporte-julio-2026-11-19-sociedad-rural-de-gualeguay",
+      "fecha": "2026-11-19",
+      "hora": "15:00",
+      "consignataria": "Consignataria Hasenkamp S.R.L.",
+      "localidad": "Sociedad Rural de Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-20-televisado",
+      "fecha": "2026-11-20",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "Televisado",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate televisado",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-11-20-sociedad-rural-de-la-paz",
       "fecha": "2026-11-20",
       "hora": "15:00",
@@ -538,6 +629,45 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "colombo-colombo-2026-11-23-hasenkamp",
+      "fecha": "2026-11-23",
+      "hora": "15:00",
+      "consignataria": "Colombo y Colombo",
+      "localidad": "Sociedad Rural de Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Consignaciones. Contacto: Pablo Di Benedetto 343-5043530",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "hasenkamp-2026-11-24-feria-don-luis",
+      "fecha": "2026-11-24",
+      "hora": null,
+      "consignataria": "Consignataria Hasenkamp S.R.L.",
+      "localidad": "Feria Don Luis – Rosario del Tala",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "GORDO, INVERNADA Y CRÍA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "laganadera-2026-11-24-maria-grande",
+      "fecha": "2026-11-24",
+      "hora": null,
+      "consignataria": "Coop. La Ganadera",
+      "localidad": "María Grande",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate feria",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -556,19 +686,6 @@
       "url_youtube": null
     },
     {
-      "id": "aporte-julio-2026-11-25-sociedad-rural-de-hasenkamp",
-      "fecha": "2026-11-25",
-      "hora": "15:00",
-      "consignataria": "Consignataria Hasenkamp S.R.L.",
-      "localidad": "Sociedad Rural de Hasenkamp",
-      "provincia": "ENTRE RÍOS",
-      "tipo": "general",
-      "titulo": "GORDO, INVERNADA y CRIA",
-      "cabezas_estimadas": null,
-      "url_catalogo": null,
-      "url_youtube": null
-    },
-    {
       "id": "laganadera-2026-11-25-villa-elisa",
       "fecha": "2026-11-25",
       "hora": null,
@@ -582,6 +699,58 @@
       "url_youtube": null
     },
     {
+      "id": "coop-pronunciamiento-2026-11-25-rosario-del-tala",
+      "fecha": "2026-11-25",
+      "hora": "14:30",
+      "consignataria": "Cooperativa El Pronunciamiento de Basavilbaso",
+      "localidad": "Rosario del Tala",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate de haciendas generales",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "aporte-julio-2026-11-25-sociedad-rural-de-hasenkamp",
+      "fecha": "2026-11-25",
+      "hora": "15:00",
+      "consignataria": "Consignataria Hasenkamp S.R.L.",
+      "localidad": "Sociedad Rural de Hasenkamp",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "hasenkamp-2026-11-26-gualeguay",
+      "fecha": "2026-11-26",
+      "hora": null,
+      "consignataria": "Consignataria Hasenkamp S.R.L.",
+      "localidad": "Sociedad Rural de Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "GORDO, INVERNADA Y CRÍA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "ildarraz-2026-11-30-concordia",
+      "fecha": "2026-11-30",
+      "hora": "14:00",
+      "consignataria": "Ildarraz Hermanos",
+      "localidad": "Bodega Robinson, Concordia",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Remate 76 aniversario",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
       "id": "aporte-julio-2026-12-01-sociedad-rural-de-nogoya",
       "fecha": "2026-12-01",
       "hora": "15:00",
@@ -590,6 +759,32 @@
       "provincia": "ENTRE RÍOS",
       "tipo": "general",
       "titulo": "GORDO, INVERNADA y CRIA",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "mendizabal-2026-12-02-gualeguay",
+      "fecha": "2026-12-02",
+      "hora": null,
+      "consignataria": "Ricardo Mendizábal Consignaciones",
+      "localidad": "Sociedad Rural de Gualeguay",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales, gordo, invernada y cría",
+      "cabezas_estimadas": null,
+      "url_catalogo": null,
+      "url_youtube": null
+    },
+    {
+      "id": "consignataria-del-sur-2026-12-17-gualeguaychu",
+      "fecha": "2026-12-17",
+      "hora": null,
+      "consignataria": "Consignataria del Sur",
+      "localidad": "Sociedad Rural de Gualeguaychú",
+      "provincia": "ENTRE RÍOS",
+      "tipo": "general",
+      "titulo": "Haciendas generales, gordo, invernada y cría. Representante en Larroque: Matías Jaimerena 3446-578067",
       "cabezas_estimadas": null,
       "url_catalogo": null,
       "url_youtube": null
@@ -607,6 +802,7 @@
     "Información aportada por Julio: Cooperativa La Ganadera, próximos remates de noviembre 2026: Villaguay 04/11, General Ramírez 05/11, María Grande 11/11, La Paz 17/11 y Villa Elisa 25/11.",
     "Información aportada por Julio desde Etchevehere Rural: Remate Habitual del 11/11/2026; localidad y horario no informados.",
     "Información aportada por Julio: flyer de Sáenz Valiente, Bullrich, 22° Exposición Nacional de Haciendas de Consumo 5 Estrellas, jueves 05/11/2026 a las 09:30 en el MAG (Mercado Agroganadero), Cañuelas.",
-    "Información aportada por Julio: flyer de Daroca Buschiazzo, remate de haciendas generales el martes 17/11/2026 a las 15:00 en la Sociedad Rural de Gualeguaychú, presencial y por streaming."
+    "Información aportada por Julio: flyer de Daroca Buschiazzo, remate de haciendas generales el martes 17/11/2026 a las 15:00 en la Sociedad Rural de Gualeguaychú, presencial y por streaming.",
+    "Información aportada por Julio: actualización de agenda de noviembre y diciembre 2026 con fechas de Consignataria Hasenkamp, Cooperativa La Ganadera, Spiazzi, Fraccaroli y Ronconi, Ricardo Mendizábal, Campos Bajos, Colombo y Colombo, Ildarraz Hermanos, Cooperativa El Pronunciamiento y Consignataria del Sur."
   ]
 }
